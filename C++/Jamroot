@@ -1,0 +1,813 @@
+#
+# Copyright John Reid 2013
+#
+
+import os ;
+import python ;
+
+use-project /boost : $(BOOST_ROOT) ;
+
+path-constant ETC : ../etc ;
+
+GCC_CFLAGS =
+    -Wno-deprecated
+    -Wno-unused
+    -ftemplate-depth=512
+    -std=c++0x
+    ;
+
+PROJECT_REQS =
+    <define>WITH_NONAMESPACES # for the SOAP interface
+    <define>BOOST_FILESYSTEM_VERSION=3 # get the correct version of boost.filesystem
+    <include>$(BOOST_ROOT)
+    <include>antlr-grammars
+    <include>include
+    <include>.
+    ;
+
+#
+# Project: biopsy
+#
+project biopsy
+    : default-build release
+    : requirements
+        $(PROJECT_REQS)
+        <toolset>gcc:<cxxflags>$(GCC_CFLAGS)
+        <toolset>darwin:<cxxflags>-Wno-unused
+        <toolset>darwin:<link>static
+        <toolset>msvc:<link>static
+    : usage-requirements
+        $(PROJECT_REQS)
+    ;
+
+
+#
+# pre-compiled headers
+#
+cpp-pch bio-pch
+    : # sources
+        bio-pch.h
+    ;
+
+
+
+
+#
+# Library: core
+#
+CORE_SOURCES =
+    application
+    common
+    database_ref
+    environment
+    equivalent_factors
+    exceptions
+    factor
+    fasta
+    gsl
+    lexer
+    log
+    match_hit
+    matrix_match
+    options
+    parsers
+    pathway
+    pathway_associations
+    pssm_motif
+    pssm_motif_elements
+    random
+    sequence
+    transcription_factor
+    ;
+ANTLR_SOURCES =
+    NucleoLexer
+    NumberLexer
+    ArrayLexer
+    ColonDotSemiStringLexer
+    StringLexer
+    IdLexer
+    LinkLexer
+    BiobaseLexer
+    ListLexer
+    WhiteSpaceLexer
+    PathwayLexer
+    CsvLexer
+    SequenceLexer
+    NameValuePairLexer
+    DotLexer
+    IndexLexer
+    DotSemiStringLexer
+    ColonStringLexer
+    DotSeparatedLexer
+    SemiStringLexer
+    FastaLexer
+    FastaParser
+    PssmMotifLexer
+    PssmMotifParser
+    ;
+lib biopsy-core
+    : # sources
+        src/bio/lib/$(CORE_SOURCES).cpp
+        antlr-grammars/$(ANTLR_SOURCES).cpp
+        /boost/filesystem//boost_filesystem
+        /boost/program_options//boost_program_options
+        /boost/serialization//boost_serialization
+        /boost/filesystem//boost_filesystem
+        /boost/date_time//boost_date_time
+        /site-config//gsl/
+    ;
+BIOPSY_LIBS += biopsy-core ;
+
+
+#
+# Library: spirit
+#
+SPIRIT_SOURCES =
+    biobase_db_compel
+    biobase_db_evidence
+    biobase_db_factor
+    biobase_db_fragment
+    biobase_db_gene
+    biobase_db_matrix
+    biobase_db_molecule
+    biobase_db_pathway
+    biobase_db_site
+    ;
+lib biopsy-spirit
+    : # sources
+        src/bio/lib/$(SPIRIT_SOURCES).cpp
+    ;
+explicit biopsy-spririt ;  # Don't build by default
+BIOPSY_LIBS += biopsy-spirit ;
+# Sandbox: spirit
+local SPIRIT_SANDBOX ;
+for local CPP in [ GLOB src/bio/spirit/sandbox : *.cpp ] {
+    local TESTNAME = spirit-$(CPP:B) ;
+    # echo $(TESTNAME) $(CPP) ;
+    unit-test $(TESTNAME) : $(CPP) : <toolset>gcc:<cxxflags>-std=c++0x ;
+    # TESTS += $(TESTNAME) ;
+    explicit $(TESTNAME) ;
+    SPIRIT_SANDBOX += $(TESTNAME) ;
+}
+alias sandbox-spirit : $(SPIRIT_SANDBOX) ;
+explicit sandbox-spirit ;
+unit-test test-spirit
+    :
+        src/bio/spirit/parser.cpp
+        biopsy-spirit
+        /boost/system//boost_system
+        #/site-config//antlr
+    :
+        <toolset>msvc:<variant>debug:<testing.launcher>dbg.bat
+    ;
+TESTS += test-spirit ;
+
+
+#
+# Library: BIOBASE
+#
+BIOBASE_SOURCES =
+    biobase_data_traits
+    biobase_db
+    biobase_db_parse
+    biobase_binding_model
+    biobase_filter
+    biobase_likelihoods
+    biobase_match
+    biobase_pssm
+    biobase_tf
+    ;
+lib biopsy-biobase
+    : # sources
+        src/bio/lib/$(BIOBASE_SOURCES).cpp
+        biopsy-spirit
+        biopsy-core
+        /boost/regex//boost_regex
+        /boost/serialization//boost_serialization
+    ;
+BIOPSY_LIBS += biopsy-biobase ;
+
+
+#
+# Library: biopsy
+#
+LIB_SOURCES =
+    contingency_homogeneity
+    matrix_dependencies
+    model_2_factor
+    multi_seq_match
+    partition
+    site_data
+    site_test_cases
+    test_data
+    ;
+lib biopsy
+    : # sources
+        src/bio/lib/$(LIB_SOURCES).cpp
+        biopsy-hmm
+        /boost/regex//boost_regex
+        /boost/filesystem//boost_filesystem
+        /boost/date_time//boost_date_time
+    ;
+BIOPSY_LIBS += biopsy ;
+
+
+#
+# Library: TSS
+#
+TSS_SOURCES =
+    tss_estimates
+    tss_data
+    ;
+lib biopsy-tss
+    : # sources
+        src/bio/lib/$(TSS_SOURCES).cpp
+    ;
+explicit biopsy-tss ;
+BIOPSY_LIBS += biopsy-tss ;
+
+
+#
+# Library: soap
+#
+SOAP_SOURCES =
+    #g_soap
+    useradmin
+    ;
+lib biopsy-soap
+    : # sources
+        src/bio/lib/$(SOAP_SOURCES).cpp
+        /boost/thread//boost_thread
+        /site-config//ssl
+    ;
+explicit biopsy-soap ;
+BIOPSY_LIBS += biopsy-soap ;
+
+
+#
+# Library: pathway
+#
+PATHWAY_SOURCES =
+    amigo_pathways
+    ;
+lib biopsy-pathway
+    : # sources
+        src/bio/lib/$(PATHWAY_SOURCES).cpp
+    ;
+explicit biopsy-pathway ;
+BIOPSY_LIBS += biopsy-pathway ;
+
+
+#
+# Library: remo
+#
+REMO_SOURCES =
+    remo
+    remo_analysis
+    test_remos
+    ;
+lib biopsy-remo
+    : # sources
+        src/bio/lib/$(REMO_SOURCES).cpp
+        biopsy-pwm
+        antlr-grammars/ReMoStringLexer.cpp
+        antlr-grammars/ReMoNumberLexer.cpp
+        antlr-grammars/ReMoLexer.cpp
+        antlr-grammars/ReMoParser.cpp
+        /boost/regex//boost_regex
+        /boost/serialization//boost_serialization
+        /boost/program_options//boost_program_options
+        /site-config//antlr
+    ;
+explicit biopsy-remo ;
+BIOPSY_LIBS += biopsy-remo ;
+
+
+#
+# Library: HMM
+#
+HMM_SOURCES =
+    chromosomes_file_set
+    species_file_sets
+    background_models
+    hmm_dna
+    ;
+lib biopsy-hmm
+    : # sources
+        src/bio/lib/$(HMM_SOURCES).cpp
+    ;
+explicit biopsy-hmm ;
+BIOPSY_LIBS += biopsy-hmm ;
+
+
+#
+# Library: SVG
+#
+SVG_SOURCES =
+    add_tooltip_support
+    dom_print
+    DOMPrintFilter
+    DOMPrintErrorHandler
+    svg_create
+    svg_pssm_logo
+    xml_builder
+    ;
+lib biopsy-svg
+    : # sources
+        src/bio/lib/$(SVG_SOURCES).cpp
+        biopsy-biobase
+    ;
+BIOPSY_LIBS += biopsy-svg ;
+
+
+#
+# Library: PWM
+#
+PWM_SOURCES =
+    adjust_hits
+    bifa_analysis
+    bifa_algorithm
+    binding_model
+    bio_max_chain
+    pssm
+    pssm_cache
+    pssm_likelihood
+    pssm_likelihood_cache
+    pssm_match_args
+    run_match
+    run_matches
+    ;
+lib biopsy-pwm
+    : # sources
+        src/bio/lib/$(PWM_SOURCES).cpp
+        biopsy-svg
+        /boost/filesystem//boost_filesystem
+        /boost/serialization//boost_serialization
+        /site-config//gsl/
+        /site-config//xerces-c/
+    : # requirements
+        <toolset>msvc:<source>src/bio/lib/win_open_file.cpp
+        <toolset>gcc:<source>src/bio/lib/linux_open_file.cpp
+        <toolset>darwin:<source>src/bio/lib/linux_open_file.cpp
+    ;
+explicit biopsy-pwm ;
+BIOPSY_LIBS += biopsy-pwm ;
+
+
+#
+# Library: Biopsy
+#
+BIOPSY2_SOURCES =
+    analyse
+    analyse_max_chain
+    binding_hits
+    build_svg_2
+    custom_pssm
+    init
+    lcs
+    remo
+    sequence
+    test_case
+    transfac
+    ;
+BIOPSY_REQS =
+    <toolset>gcc:<cxxflags>-fno-strict-aliasing
+    ;
+# Need special settings to compile PSSM code for FPU
+obj pssm
+    :
+        src/biopsy/lib/pssm.cpp
+    :
+        <toolset>gcc:<cxxflags>-msse2
+        <toolset>gcc:<cxxflags>-mfpmath=sse
+        #<use>/site-config//gsl
+        $(BIOPSY_REQS)
+    ;
+lib biopsy2
+    : # sources
+        src/biopsy/lib/$(BIOPSY2_SOURCES).cpp
+        pssm
+        biopsy-remo
+        biopsy
+        biopsy-pwm
+        biopsy-biobase
+        biopsy-core
+        biopsy-soap
+        #/boost/filesystem//boost_filesystem
+        #/boost/serialization//boost_serialization
+        /site-config//gsl/
+        #/site-config//xerces-c/
+    : # requirements
+        <include>boost-indexing-suite
+        $(BIOPSY_REQS)
+        <use>/boost/python//boost_python/<link>shared # gets python include path
+        <variant>debug:<define>BIO_MAX_CHAIN_MAX_SEQUENCES=4
+        <variant>release:<define>BIO_MAX_CHAIN_MAX_SEQUENCES=9
+    : # default build
+    : # usage requirements
+        <include>boost-indexing-suite
+    ;
+explicit biopsy2 ;
+BIOPSY_LIBS += biopsy2 ;
+#
+# Python extensions
+#
+BIOPSY_SRC =
+    environment
+    analyse
+    binding_hits
+    biopsy
+    # db_ref
+    lcs
+    pssm
+    pssm_match
+    remo
+    test_case
+    transfac
+    transfac_2
+    transfac_3
+    ;
+lib biopsy-python
+    : # sources
+        src/biopsy/python/python_$(BIOPSY_SRC).cpp
+        biopsy2
+        /boost/python//boost_python
+    : # requirements
+        # <use>/boost/python//boost_python # gets python include path
+        <define>BIOPSY_BUILD_PYTHON_EXPORT
+    ;
+# Python extension
+python-extension _biopsy
+    : # sources
+        src/biopsy/python/module_biopsy.cpp
+        biopsy-python
+   ;
+python-extension _transfac
+    : # sources
+        src/biopsy/python/module_transfac.cpp
+        biopsy-python
+    ;
+python-extension _bifa
+    : # sources
+        src/biopsy/python/module_bifa.cpp
+        biopsy-python
+        biopsy2
+        myrrh//myrrh_pylib
+    :
+        <source>myrrh//myrrh
+    ;
+# Installation
+install install_ext_biopsy
+    :
+        _biopsy
+    :
+        <location>../Python/biopsy
+        <install-dependencies>off
+    ;
+
+install install_ext_transfac
+    :
+        _transfac
+    :
+        <location>../Python/biopsy/transfac
+        <install-dependencies>off
+    ;
+
+install install_so
+    :
+        biopsy-python
+        biopsy-remo
+        biopsy-biobase
+        /boost/date_time//boost_date_time
+        /boost/filesystem//boost_filesystem
+        /boost/program_options//boost_program_options
+        /boost/python//boost_python
+        /boost/regex//boost_regex
+        /boost/serialization//boost_serialization
+        #/boost/signals//boost_signals
+        /boost/system//boost_system
+        /boost/thread//boost_thread
+    :
+        <variant>debug:<location>lib/debug
+        <variant>release:<location>lib
+    ;
+alias install_biopsy : install_so install_ext_biopsy install_ext_transfac ;
+alias install : install_biopsy ;
+
+
+#
+# Library: test
+#
+lib biopsy-test : test/bio_lib.cpp ;
+
+
+#
+# Tests: standalone
+#
+STANDALONE_TESTS =
+    check_lcs
+    check_lcs_algorithms
+    ;
+for TEST in $(STANDALONE_TESTS) {
+    run
+            test/$(TEST).cpp
+            biopsy-remo
+            /boost//unit_test_framework/<link>static
+            #boost-unit-test/<link>static
+            # boost-unit-test
+            /boost/system//boost_system
+        :
+        :
+        :
+            <define>BIO_STANDALONE_TEST
+            <include>src/bio/lib
+            # <include>$(CGAL_ROOT)/include
+            # <include>$(CGAL_ROOT)/include/CGAL/config/msvc7
+            # <toolset>msvc:<variant>release:<find-library>libcgal-vc80-mt-1_34
+            # <toolset>msvc:<variant>release:<find-library>libcgal-vc80-mt-gd-1_34
+        :
+            $(TEST)
+        ;
+}
+alias test-standalone : $(STANDALONE_TESTS) ;
+TESTS += $(STANDALONE_TESTS) ;
+
+
+#
+# Tests: combined
+#
+TEST_SRCS
+    =
+        check_biobase_likelihoods
+        check_factor_synonyms
+        check_pssm_match
+        check_tss_estimates
+        check_adjust_phylo
+        check_bifa_algorithm
+        check_binding_model
+        check_binding_max_chain
+        check_biobase_matches
+        check_cache
+        check_contingency_homogeneity
+        check_create_match_svg
+        check_factor_pathway_map
+        check_fasta
+        check_hidden_markov_model
+        check_math
+        check_matrix_dependencies
+        check_matrix_match_map
+        check_multi_seq_match
+        check_pathway_parse
+        check_pssm_likelihoods
+        check_pssm_motif
+        check_pssm_pathway_map
+        check_random
+        check_remo_parse
+        check_remos
+        check_site_data
+        check_species_file_sets
+        check_svg
+        # No longer used
+        # check_biobase_parse
+        # check_eigen_solve
+        # check_hmm_dna
+        # check_http_server
+        # check_kegg
+        # check_markov_model
+        # check_ott_normalisation
+        # check_serialisation_strategy
+        # check_weak_pssms
+        # check_wsdl
+    ;
+obj test/check_score_map : test/check_score_map.cpp : <toolset>gcc:<cxxflags>-Wno-uninitialized ;
+exe test-biopsy
+    :
+        biopsy-test
+        biopsy-core
+        biopsy
+        biopsy-biobase
+        biopsy-spirit
+        biopsy-pwm
+        biopsy-svg
+        biopsy-remo
+        biopsy-hmm
+        biopsy-tss
+        biopsy-pathway
+        test/bio_test.cpp
+        test/$(TEST_SRCS).cpp
+        # test/check_clustering # special obj target defined above
+        test/check_score_map # special target defined above
+        /boost//unit_test_framework/<link>static
+        /boost/system//boost_system
+        /boost/filesystem//boost_filesystem
+        /boost/serialization//boost_serialization
+        /boost/program_options//boost_program_options
+        /site-config//gsl/
+        /site-config//xerces-c/
+        /site-config//antlr
+    :
+        <include>src/bio/lib
+        <include>$(CGAL_ROOT)/include
+        <include>$(CGAL_ROOT)/include/CGAL/config/msvc7
+        <toolset>msvc:<variant>release:<find-library>libcgal-vc80-mt-1_34
+        <toolset>msvc:<variant>release:<find-library>libcgal-vc80-mt-gd-1_34
+    ;
+explicit test-biopsy ;
+TESTS += test-biopsy ;
+
+#
+# Test BiFA algorithm
+#
+BIFA_MAIN_SOURCES =
+    src/bio/exes/main_bifa.cpp
+    biopsy2
+    biopsy-soap
+    biopsy-pwm
+    biopsy-biobase
+    biopsy-core
+    /boost/program_options//boost_program_options
+    /boost/serialization//boost_serialization
+    /site-config//antlr
+    ;
+run $(BIFA_MAIN_SOURCES)
+    : -i JP-000176 $(ETC)/test-data/cfoshela-chr1-0211467683-0211487789.fa
+    :
+    :
+    : test-bifa
+    ;
+VALGRIND = "valgrind --leak-check=full --error-exitcode=1 --suppressions=$(ETC)/biopsy.supp" ;
+run $(BIFA_MAIN_SOURCES)
+    : -r LEF1 $(ETC)/test-data/pee.fa
+    :
+    : <variant>debug:<testing.launcher>$(VALGRIND)
+    : valgrind-bifa
+    ;
+
+
+#
+# Python tests
+#
+PY_TESTS =
+    max_chain
+    sequence_vec_pickle
+    hit_vec
+    build_svg
+    score_pssm
+    biopsy_scoring
+    ;
+PY_TEST_SOURCES =
+    _biopsy
+    biopsy-remo
+    biopsy-pwm
+    biopsy
+    ;
+for PY_TEST in $(PY_TESTS) {
+    local NAME = $(PY_TEST)_test ;
+    bpl-test $(NAME) : python_test/test_$(PY_TEST).py _biopsy ;
+    PYTESTS += $(NAME) ;
+}
+bpl-test bifa_score_test : python_test/bifa/test_bifa_score.py _bifa _biopsy ;
+PYTESTS += bifa_score_test ;
+
+
+#
+# C++ tests
+#
+run src/biopsy/test/test_bifa_score.cpp
+    biopsy-soap
+    biopsy2
+    /boost//unit_test_framework/
+    /boost/system//boost_system/
+    :
+    :
+    :
+    : test_bifa_score
+    ;
+run src/biopsy/test/test_site_consensus.cpp
+    biopsy2
+    biopsy-spirit
+    biopsy-core
+    /boost//unit_test_framework/
+    /boost/system//boost_system/
+    :
+    :
+    :
+    : test_site_consensus
+    ;
+# run src/biopsy/test/test_multi_array_view.cpp : : : : test_multi_array_view ;
+run src/biopsy/test/test_max_chain.cpp
+    biopsy2
+    biopsy-spirit
+    biopsy-soap
+    biopsy-core
+    #/boost//unit_test_framework/
+    /boost/system//boost_system/
+    :
+    : $(ETC)/test-data/maximal-chain-e2f.fasta
+    :
+    : test_max_chain
+    ;
+explicit test_bifa_score test_site_consensus test_max_chain ;
+TESTS += test_bifa_score test_site_consensus test_max_chain ;
+
+
+#
+# Valgrind tests
+#
+VALGRIND = "valgrind --leak-check=full --error-exitcode=1 --suppressions=$(ETC)/biopsy.supp" ;
+run-fail src/biopsy/test/valgrind_leak.cpp
+    :
+    :
+    : <testing.launcher>$(VALGRIND)
+    : valgrind_leak
+    ;
+run src/biopsy/test/valgrind_run_bifa.cpp
+    biopsy2
+    biopsy-soap
+    biopsy-core
+    /boost/system//boost_system/
+    : $(ETC)/test-data/maximal-chain-e2f.fasta
+    :
+    : <testing.launcher>$(VALGRIND)
+    : valgrind_run_bifa
+    ;
+explicit valgrind_leak valgrind_run_bifa ;
+TESTS += valgrind_leak valgrind_run_bifa ;
+
+
+#
+# Sandbox
+#
+run src/sandbox/multi_array_view.cpp
+    :
+    :
+    : <testing.launcher>$(VALGRIND) <include>$(BOOST_ROOT)
+    : multi_array_view
+    ;
+explicit multi_array_view ;
+
+
+#
+# Gapped PSSMs
+#
+# if "LINUX" != [ os.name ] { BUILD_GAPPED_PSSM = "yes" ; }
+#BUILD_GAPPED_PSSM = "yes" ;
+if $(BUILD_GAPPED_PSSM) {
+
+lib gapped_pssm_lib
+    : # sources
+        src/gapped_pssm/gapped_pssm.cpp
+        src/gapped_pssm/gapped_pssm_2.cpp
+        src/gapped_pssm/gsl.cpp
+        /site-config//gsl
+    : # requirements
+        <use>/boost
+        # <link>static
+    ;
+
+python-extension _gapped_pssms
+    : # sources
+        src/gapped_pssm/python_gapped_pssm.cpp
+        gapped_pssm_lib
+        /boost/python//boost_python
+    : # requirements
+    ;
+
+python-extension _gapped_pssms_hmm
+    : # sources
+        src/gapped_pssm/python_gapped_pssm_hmm.cpp
+        src/gapped_pssm/gapped_pssm_hmm.cpp
+        /boost/python//boost_python
+        /site-config//gsl
+    : # requirements
+    ;
+
+exe biopsy_test
+    : # sources
+        src/gapped_pssm/gapped_pssm_test.cpp
+        gapped_pssm_lib
+        /boost/test//boost_test_exec_monitor
+    ;
+
+bpl-test gapped_pssm_hmm_test
+    :
+        python_test/test_gapped_pssm.py
+        _gapped_pssms_hmm
+    ;
+
+install install_ext_gapped_psmms
+    :
+        _gapped_pssms
+        _gapped_pssms_hmm
+    :
+        <location>../Python/biopsy/gapped_pssms
+        #<variant>release:<location>../Python/biopsy/gapped_pssms
+        #<variant>debug:<location>../Python/debug
+        <install-dependencies>off 
+    ;
+} # BUILD_GAPPED_PSSM
+
+alias py-tests : $(PYTESTS) ;
+alias c-tests : $(TESTS) ;
+alias all-tests : c-tests py-tests ;
+explicit py-tests c-tests all-tests ;

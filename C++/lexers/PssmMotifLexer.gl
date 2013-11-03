@@ -1,0 +1,80 @@
+header "pre_include_cpp"
+{
+	#include "bio-pch.h"
+	#include "bio/defs.h"
+}
+
+
+options {
+	language="Cpp";
+	namespace = "bio";
+}
+
+
+class PssmMotifLexer extends Lexer;
+options
+{
+	charVocabulary = '\3'..'\377';
+	exportVocab = PssmMotifLexer;
+}
+tokens
+{
+	STRING;
+	INTEGER;
+	BIOBASE_LINK;
+	
+	PSSM="PSSM";
+	FACTOR="FACTOR";
+	
+	OR="OR";
+	OPEN_RANGE="[";
+	CLOSE_RANGE="]";
+	COMMA=",";
+	SEMI=";";
+}
+{
+public:
+	bool found_eof;
+	
+	virtual void uponEOF()
+	{
+		found_eof = true;
+	}
+}
+
+BIOBASE_LINK
+	:
+	( 'R' | 'M' | 'T' ) ( '0' .. '9' )+
+	;
+
+STRING
+options { testLiterals = false; }
+	:
+	'"' ( ~( '\"' ) )+ '"' //matches anything inside QUOTEs
+	;
+	
+INTEGER
+	:
+	( '0' .. '9' )+
+	;
+	
+WS
+	:
+	( ' ' | '\t' | '\r' | '\n' )+
+	;
+	
+DEFAULT
+	:
+	( ( 'A' .. 'L' | 'N' .. 'Q' | 'S' | 'U' .. 'Z' ) ( 'A' .. 'Z' )+ )
+	|
+	'|'
+	|
+	';'
+	|
+	'['
+	|
+	']'
+	|
+	','
+	;
+

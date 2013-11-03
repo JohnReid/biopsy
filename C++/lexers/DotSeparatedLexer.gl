@@ -1,0 +1,29 @@
+header "pre_include_cpp"
+{
+	#include "bio-pch.h"
+	#include "bio/defs.h"
+}
+
+
+options {
+	language="Cpp";
+	namespace = "bio";
+}
+
+
+class DotSeparatedLexer extends Lexer;
+options {
+	charVocabulary = '\3'..'\377';
+	importVocab = Common;
+	testLiterals = false;
+	k = 2;
+}
+
+DOUBLECOLON			: "::" ; //match a colon with trailing spaces
+STRING				: (~(';' | ':' | '.' | '\r' | '\n'))+ ; //matches anything apart from ; : . and new line
+SEMI				: ';' (' ')* ; //match a semi with trailing spaces
+COLON				: {LA(2) != ':'}? ':' (' ')* ; //match a colon with trailing spaces
+DOT					: '.' ; //match a dot without trailing spaces or new line
+NEW_LINE			: ('\r')? '\n' {newline();} ;
+
+

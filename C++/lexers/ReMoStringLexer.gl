@@ -1,0 +1,28 @@
+header "pre_include_cpp"
+{
+	#include "bio-pch.h"
+	#include "bio/defs.h"
+}
+
+options {
+	language="Cpp";
+	namespace = "bio";
+}
+
+
+
+class ReMoStringLexer extends Lexer;
+options {
+	charVocabulary = '\3'..'\377';
+	importVocab = ReMoLexer;
+	testLiterals=false;
+}
+STRING					: (~('\r' | '\n'))+ ; //matches everything up to a new line
+NEW_LINE				: ('\r')? '\n' {newline();} ;
+
+
+
+
+
+
+

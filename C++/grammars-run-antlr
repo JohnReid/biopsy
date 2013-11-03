@@ -1,0 +1,66 @@
+#!/bin/bash -e
+
+OUTPUT=antlr-grammars
+ANTLR="antlr -o $OUTPUT"
+
+[ -d $OUTPUT ] || mkdir $OUTPUT
+
+LEXERS="
+    NameValuePairLexer
+    ReMoLexer
+    NucleoLexer
+    ArrayLexer
+    NameValuePairLexer
+    BiobaseLexer
+    PssmMotifLexer
+    FastaLexer
+    FastaLexer2
+    ReMoNumberLexer
+    ReMoStringLexer
+    ArrayLexer
+    ColonStringLexer
+    ColonDotSemiStringLexer
+    CsvLexer
+    DotLexer
+    DotSemiStringLexer
+    DotSeparatedLexer
+    IdLexer
+    IndexLexer
+    LinkLexer
+    ListLexer
+    NumberLexer
+    PathwayLexer
+    SemiStringLexer
+    SequenceLexer
+    StringLexer
+    WhiteSpaceLexer
+"
+
+for LEXER in $LEXERS
+do
+    echo $LEXER
+    $ANTLR lexers/$LEXER.gl >$OUTPUT/$LEXER.out 2>$OUTPUT/$LEXER.err
+done
+
+PARSERS="
+    CompelParser
+    EvidenceParser
+    FactorParser
+    FastaParser
+    FragmentParser
+    GeneParser
+    MatrixParser
+    MoleculeParser
+    PathwayParser
+    SiteParser
+    PssmMotifParser
+    FastaParser
+    ReMoParser
+    MatrixMatchParser
+    DatabaseRefParser
+"
+for PARSER in $PARSERS
+do
+    echo $PARSER
+    $ANTLR parsers/$PARSER.gp >$OUTPUT/$PARSER.out 2>$OUTPUT/$PARSER.err
+done

@@ -1,0 +1,4 @@
+#!/bin/bash -e
+
+valgrind --gen-suppressions=all --leak-check=yes --log-file=valgrind.log "$@"
+

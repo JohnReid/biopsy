@@ -1,0 +1,24 @@
+header "pre_include_cpp"
+{
+	#include "bio-pch.h"
+	#include "bio/defs.h"
+}
+
+
+options {
+	language="Cpp";
+	namespace = "bio";
+}
+
+
+class CsvLexer extends Lexer; //lexes an array of items separated by commas
+options {
+	charVocabulary = '\3'..'\377';
+	importVocab = Common;
+	testLiterals=false;
+}
+STRING				: (~(',' | ';' | '\r' | '\n'))+ ; //matches anything apart from ',' ';' and new line
+COMMA				: (',' (' ')*) ;
+SEMI				: (';' (' ')*) ;
+NEW_LINE			: ('\r')? '\n' {newline();} ;
+

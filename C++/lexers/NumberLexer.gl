@@ -1,0 +1,21 @@
+header "pre_include_cpp"
+{
+	#include "bio-pch.h"
+	#include "bio/defs.h"
+}
+
+options {
+	language="Cpp";
+	namespace = "bio";
+}
+
+
+class NumberLexer extends Lexer;
+options {
+	charVocabulary = '\3'..'\377';
+	importVocab = Common;
+	testLiterals=false;
+}
+NUMBER					: ('-')? ('0'..'9')+ ; //matches something like 0023
+NEW_LINE				: ('\r')? '\n' {newline();} ;
+

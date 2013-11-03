@@ -1,0 +1,9 @@
+#!/bin/bash -e
+
+DIR=transcompel
+[ -d $DIR ] || mkdir $DIR
+TAR=${1:?USAGE: $0 <TRANScompel....tar.gz>}
+tar xvf $TAR --wildcards --no-wildcards-match-slash dat/*.dat doc/*.txt
+mv dat/*.dat doc/*.txt $DIR
+rmdir dat doc
+

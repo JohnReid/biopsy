@@ -1,0 +1,8 @@
+#!/bin/bash -e
+
+DIR=transpath
+[ -d $DIR ] || mkdir $DIR
+TAR=${1:?USAGE: $0 <TRANScompel....tar.gz>}
+cd $DIR
+tar xvf $TAR
+

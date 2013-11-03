@@ -1,0 +1,23 @@
+header "pre_include_cpp"
+{
+	#include "bio-pch.h"
+	#include "bio/defs.h"
+}
+
+
+options {
+	language="Cpp";
+	namespace = "bio";
+}
+
+
+class DotLexer extends Lexer;
+options {
+	charVocabulary = '\3'..'\377';
+	importVocab = Common;
+	testLiterals = false;
+}
+STRING				: ( ~( '.' | '\r' | '\n' ) )+ ; //matches anything apart from . and new line
+DOT					: '.' ;
+NEW_LINE			: ('\r')? '\n' {newline();} ;
+

@@ -1,0 +1,6 @@
+[submodule "C++/myrrh"]
+	path = C++/myrrh
+	url = git@github.com:JohnReid/myrrh.git
+[submodule "C++/boost-indexing-suite"]
+	path = C++/boost-indexing-suite
+	url = git@github.com:JohnReid/boost-indexing-suite.git

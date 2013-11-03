@@ -1,0 +1,7 @@
+#ifndef BIO_TEST_CHECK_FNS_H_
+#define BIO_TEST_CHECK_FNS_H_
+
+
+#endif //BIO_TEST_CHECK_FNS_H_
+
+

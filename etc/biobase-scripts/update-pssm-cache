@@ -1,0 +1,9 @@
+#!/usr/bin/env python2
+
+import biopsy
+
+for a in biopsy.pssm.get_transfac_pssm_accessions(biopsy.transfac.PssmFilter.all_pssms()):
+    # print 'Ensuring %s is in pssm cache' % a
+    biopsy.pssm.get_pssm(a)
+
+biopsy.pssm.save_pssm_cache_state()

@@ -1,0 +1,38 @@
+#!/usr/bin/env python
+
+import subprocess
+import os
+
+bifa_cmd = "../bin/Bio/gcc-4.6/release/bifa -r LEF1 --max_chain"
+pee_fasta = os.path.join('..', 'etc', 'test-data', 'pee.fa')
+
+def quote_if_required(s):
+    """Add quotes if s has a space in it.
+    """
+    if s.find(' ') != -1:
+        return "'%s'" % s
+    else:
+        return s
+
+for use_cumulative, use_p_value, use_score, label in (
+    (True,  True,  True,  'p-value cumulative'),
+    (True,  False, True,  'Bayesian cumulative'),
+    (False, True,  True,  'p-value not cumulative'),
+    (False, False, True,  'Bayesian not cumulative'),
+    (False, False, False, 'BiFA'),
+):
+    args = bifa_cmd.split(' ')
+    tag = ''
+    if use_cumulative:
+        args.append('--cumulative_dists')
+        tag += 'c'
+    if use_p_value:
+        args.append('--use_p_value')
+        tag += 'p'
+    if use_score:
+        args.append('--use_score')
+        tag += 's'
+    args.extend(['--svg_file', 'pee-%s.svg' % tag, '--svg_title', label,
+                 pee_fasta])
+    print ' '.join(map(quote_if_required, args))
+    subprocess.check_call(args)

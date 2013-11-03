@@ -1,0 +1,24 @@
+header "pre_include_cpp"
+{
+	#include "bio-pch.h"
+	#include "bio/defs.h"
+}
+
+
+options {
+	language="Cpp";
+	namespace = "bio";
+}
+
+
+class IdLexer extends Lexer;
+options {
+	charVocabulary = '\3'..'\377';
+	importVocab = Common;
+	testLiterals=false;
+}
+STRING				: (~('$' | '_' | '\r' | '\n'))+ ; //matches anything apart from $ _ and new line
+DOLLAR				: '$' ;
+UNDER				: '_' ;
+NEW_LINE			: ('\r')? '\n' {newline();} ;
+

@@ -1,0 +1,20 @@
+header "pre_include_hpp" {
+}
+
+options {
+	language="Cpp";
+	namespace = "bio";
+}
+
+
+
+class FastaLexer2 extends Lexer;
+options {
+	testLiterals = false;
+	charVocabulary = '\3'..'\377';
+	importVocab = NucleoLexer;
+	exportVocab = FastaLexer2;
+}
+DESC_BEGIN			: '>' ;
+DESC_LINE			: ~('>' | '\r' | '\n') (~('\r' | '\n'))* ; //matches everything up to a new line
+NEW_LINE			: ('\r')? '\n' {newline();} ;

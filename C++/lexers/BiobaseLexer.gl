@@ -1,0 +1,48 @@
+header "pre_include_hpp" {
+	#ifdef _MSC_VER
+    # pragma warning (disable : 4996)
+    #endif
+}
+
+header "pre_include_cpp"
+{
+	#include "bio-pch.h"
+	#include "bio/defs.h"
+}
+
+
+options {
+	language="Cpp";
+	namespace = "bio";
+}
+
+
+
+
+class BiobaseLexer extends Lexer;
+options {
+	testLiterals = false;
+	charVocabulary = '\3'..'\377';
+	importVocab = NameValuePairLexer;
+	exportVocab = BiobaseLexer;
+}
+protected NUMBER		: '0'..'9' ;
+protected CODE_ELEMENT	: 'A'..'Z' | '/' ;
+
+CODE
+options { testLiterals = true; }
+	 					: CODE_ELEMENT (CODE_ELEMENT | NUMBER) ;
+
+NUMBER_CODE
+options { testLiterals = true; }
+	 					: NUMBER NUMBER ;
+
+SPACES					: ' ' ' ' ;
+NEW_LINE				: ('\r')? '\n' {newline();} ;
+
+
+
+
+
+
+

@@ -1,0 +1,13 @@
+#!/bin/bash -ex
+
+SELF=$(readlink -f $BASH_SOURCE)
+SELFDIR=$(dirname $SELF)
+
+cd $HOME/Data/serialised
+
+parse_transfac
+rm factor_synonyms.txt
+factor_synonyms
+$SELFDIR/update-pssm-cache
+calculate_pssm_likelihoods
+# calculate_normalisations  # Can only run this when we have a species_hmm.txt

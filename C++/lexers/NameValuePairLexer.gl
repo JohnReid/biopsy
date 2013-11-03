@@ -1,0 +1,37 @@
+header "pre_include_cpp"
+{
+	#include "bio-pch.h"
+	#include "bio/defs.h"
+}
+
+
+options {
+	language="Cpp";
+	namespace = "bio";
+}
+
+
+class NameValuePairLexer extends Lexer; //lexes an array of items separated by spaces
+options {
+	charVocabulary = '\3'..'\377';
+	importVocab = Common;
+	exportVocab = NameValuePairLexer;
+	testLiterals = true;
+	k = 2;
+}
+tokens
+{
+	QUALITY	= "Quality:";
+	SPECIES	= "Species:";
+	CELLULAR = "Cellular";
+	SOURCE = "source:";
+	SITES = "sites";
+	INCLUDED = "included:";
+}
+
+
+WORD			: (~(';' | ' ' | '\r' | '\n'))+ ;
+
+NEW_LINE		: ('\r')? '\n' {newline();} ;
+SEMI			: (';') ;
+WS				: (' ')+ ;

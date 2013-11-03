@@ -1,0 +1,30 @@
+header "pre_include_hpp" {
+	#ifdef _MSC_VER
+    # pragma warning (disable : 4996)
+    #endif
+}
+
+header "pre_include_cpp"
+{
+	#include "bio-pch.h"
+	#include "bio/defs.h"
+}
+
+
+options {
+	language="Cpp";
+	namespace = "bio";
+}
+
+
+
+
+class SemiStringLexer extends Lexer;
+options {
+	testLiterals = false;
+	charVocabulary = '\3'..'\377';
+	importVocab = Common ;
+}
+STRING					: ( ~( ';' | '\r' | '\n' ) )+ ; //matches everything up to a new line
+SEMI					: ';' ;
+NEW_LINE				: ('\r')? '\n' {newline();} ;

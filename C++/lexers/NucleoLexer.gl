@@ -1,0 +1,26 @@
+header "pre_include_cpp"
+{
+	#include "bio-pch.h"
+	#include "bio/defs.h"
+}
+
+options {
+	language="Cpp";
+	namespace = "bio";
+}
+
+
+
+class NucleoLexer extends Lexer;
+options {
+	testLiterals = false;
+	charVocabulary = '\3'..'\377';
+	exportVocab = NucleoLexer;
+}
+protected NUCLEO	: 'a' | 'A' | 'c' | 'C' | 'g' | 'G' | 't' | 'T' | 'n' | 'N' ;
+NUCLEO_SEQ			: (NUCLEO)+ ;
+GAP					: '-' ;
+U					: 'U' ;
+STAR				: '*' ;
+NEW_LINE			: ('\r')? '\n' {newline();} ;
+

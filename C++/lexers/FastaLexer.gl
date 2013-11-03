@@ -1,0 +1,23 @@
+header "pre_include_cpp"
+{
+	#include "bio-pch.h"
+	#include "bio/defs.h"
+}
+
+options {
+	language="Cpp";
+	namespace = "bio";
+}
+
+
+
+class FastaLexer extends Lexer;
+options {
+	testLiterals = false;
+	charVocabulary = '\3'..'\377';
+	importVocab = NucleoLexer;
+	exportVocab = FastaLexer;
+}
+DESC_BEGIN			: '>' ;
+DESC_LINE			: ~('>' | '\r' | '\n') (~('\r' | '\n'))* ; //matches everything up to a new line
+NEW_LINE			: ('\r')? '\n' {newline();} ;

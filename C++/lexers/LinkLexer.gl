@@ -1,0 +1,26 @@
+header "pre_include_cpp"
+{
+	#include "bio-pch.h"
+	#include "bio/defs.h"
+}
+
+
+options {
+	language="Cpp";
+	namespace = "bio";
+}
+
+
+class LinkLexer extends Lexer; //lexes something like M0023 (a link to an entry in another table) 
+options {
+	charVocabulary = '\3'..'\377';
+	importVocab = Common;
+	testLiterals=false;
+}
+TABLE_ID options { ignore = SPACES ; }			: ('A'..'Z' | 'a'..'z')+ ; //matches something like M
+NUMBER											: ('-')? ('0'..'9')+ ; //matches something like 0023
+PIPE											: '|' ;
+DOT												: '.' ;
+SPACES											: (' ')+ ;
+NEW_LINE										: ('\r')? '\n' {newline();} ;
+

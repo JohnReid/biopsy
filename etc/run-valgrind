@@ -1,0 +1,4 @@
+#!/bin/bash -e
+
+valgrind --leak-check=full --db-attach=yes --suppressions=../etc/biopsy.supp "$@"
+
