@@ -1,0 +1,97 @@
+UGCluster	NAME
+Hs.10283	RBM8A RNA binding motif protein 8A
+Hs.104019	"TACC3 transforming, acidic coiled-coil containing protein 3"
+Hs.108106	ICBP90 transcription factor
+Hs.109706	HN1 hematological and neurological expressed 1
+Hs.111988	SET07 PR/SET domain containing protein 07
+Hs.112255	NUP98 nucleoporin 98kD
+Hs.129914	RUNX1 runt-related transcription factor 1 (acute myeloid leukemia 1; aml1 oncogene)
+Hs.143323	PLU-1 putative DNA/chromatin binding motif
+Hs.147097	"H2AFX H2A histone family, member X"
+Hs.149098	SMTN smoothelin
+Hs.151903	HMGE GrpE-like protein cochaperone
+Hs.154443	MCM4 minichromosome maintenance deficient (S. cerevisiae) 4
+Hs.155321	SRF serum response factor (c-fos serum response element-binding transcription factor)
+Hs.155462	"MCM6 minichromosome maintenance deficient (mis5, S. pombe) 6"
+Hs.156346	TOP2A topoisomerase (DNA) II alpha (170kD)
+Hs.1594	CENPA centromere protein A (17kD)
+Hs.159557	"KPNA2 karyopherin alpha 2 (RAG cohort 1, importin alpha 1)"
+Hs.1634	CDC25A cell division cycle 25A
+Hs.16346	" ESTs, Weakly similar to S57447 HPBRII-7 protein [H.sapiens]"
+Hs.16520	DKFZp762L0311 hypothetical protein DKFZp762L0311
+Hs.169840	TTK TTK protein kinase
+Hs.171955	TROAP trophinin associated protein (tastin)
+Hs.172195	"MGAT2 mannosyl (alpha-1,6-)-glycoprotein beta-1,2-N-acetylglucosaminyltransferase"
+Hs.174070	E2-EPF ubiquitin carrier protein
+Hs.183299	 ESTs
+Hs.184339	KIAA0175 likely ortholog of maternal embryonic leucine zipper kinase
+Hs.184771	NFIC nuclear factor I/C (CCAAT-binding transcription factor)
+Hs.19322	" Homo sapiens, Similar to RIKEN cDNA 2010317E24 gene, clone IMAGE:3502019, mRNA, partial cds"
+Hs.19368	MATN2 matrilin 2
+Hs.194698	CCNB2 cyclin B2
+Hs.1973	CCNF cyclin F
+Hs.20830	KNSL2 kinesin-like 2
+Hs.226117	"H1F0 H1 histone family, member 0"
+Hs.2331	"E2F5 E2F transcription factor 5, p130-binding"
+Hs.234896	LOC51053 geminin
+Hs.239	FOXM1 forkhead box M1
+Hs.23960	CCNB1 cyclin B1
+Hs.250822	STK15 serine/threonine kinase 15
+Hs.270845	KNSL5 kinesin-like 5 (mitotic kinesin-like protein 1)
+Hs.28777	"H2AFL H2A histone family, member L"
+Hs.288283	" Homo sapiens cDNA: FLJ22355 fis, clone HRC06344"
+Hs.29287	RBBP8 retinoblastoma-binding protein 8
+Hs.295112	KIAA0618 KIAA0618 gene product
+Hs.29656	"CDKN2D cyclin-dependent kinase inhibitor 2D (p19, inhibits CDK4)"
+Hs.3104	KIAA0042 KIAA0042 gene product
+Hs.3260	PSEN1 presenilin 1 (Alzheimer disease 3)
+Hs.333893	JPO1 c-Myc target JPO1
+Hs.334334	TFAP2A transcription factor AP-2 alpha (activating enhancer-binding protein 2 alpha)
+Hs.334562	"CDC2 cell division cycle 2, G1 to S and G2 to M"
+Hs.343475	CTSD cathepsin D (lysosomal aspartyl protease)
+Hs.348669	CKS1 CDC28 protein kinase 1
+Hs.35120	RFC4 replication factor C (activator 1) 4 (37kD)
+Hs.40323	"BUB3 BUB3 (budding uninhibited by benzimidazoles 3, yeast) homolog"
+Hs.46423	"H4FG H4 histone family, member G"
+Hs.46677	PRO2000 PRO2000 protein
+Hs.48480	 ESTs
+Hs.48855	FLJ10468 hypothetical protein FLJ10468
+Hs.5241	"FABP1 fatty acid binding protein 1, liver"
+Hs.5464	SMAP thyroid hormone receptor coactivating protein
+Hs.57101	MCM2 minichromosome maintenance deficient (S. cerevisiae) 2 (mitotin)
+Hs.69360	KNSL6 kinesin-like 6 (mitotic centromere-associated kinesin)
+Hs.70704	DJ616B8.3 hypothetical protein dJ616B8.3
+Hs.7145	CAPN7 calpain 7
+Hs.72550	HMMR hyaluronan-mediated motility receptor (RHAMM)
+Hs.74316	"DSP desmoplakin (DPI, DPII)"
+Hs.74519	"PRIM2A primase, polypeptide 2A (58kD)"
+Hs.74552	"CASP3 caspase 3, apoptosis-related cysteine protease"
+Hs.75104	"RNPS1 RNA-binding protein S1, serine-rich domain"
+Hs.75238	"CHAF1B chromatin assembly factor 1, subunit B (p60)"
+Hs.75249	ARL6IP ADP-ribosylation factor-like 6 interacting protein
+Hs.75257	SLBP stem-loop (histone) binding protein
+Hs.76989	KIAA0097 KIAA0097 gene product
+Hs.77597	PLK polo (Drosophia)-like kinase
+Hs.77695	KIAA0008 KIAA0008 gene product
+Hs.77783	PKMYT1 membrane-associated tyrosine- and threonine-specific cdc2-inhibitory kinase
+Hs.78853	UNG uracil-DNA glycosylase
+Hs.79337	KIAA0135 KIAA0135 protein
+Hs.79828	FLJ20333 hypothetical protein FLJ20333
+Hs.80976	MKI67 antigen identified by monoclonal antibody Ki-67
+Hs.81848	RAD21 RAD21 (S. pombe) homolog
+Hs.82294	RGS3 regulator of G-protein signalling 3
+Hs.82502	"POLD3 polymerase (DNA directed), delta 3"
+Hs.82906	"CDC20 CDC20 (cell division cycle 20, S. cerevisiae, homolog)"
+Hs.82932	CCND1 cyclin D1 (PRAD1: parathyroid adenomatosis 1)
+Hs.83758	CKS2 CDC28 protein kinase 2
+Hs.85137	CCNA2 cyclin A2
+Hs.86211	FLJ10156 hypothetical protein
+Hs.8878	KNSL1 kinesin-like 1
+Hs.90077	TGIF TGFB-induced factor (TALE family homeobox)
+Hs.93002	UBE2C ubiquitin-conjugating enzyme E2C
+Hs.9329	C20orf1 chromosome 20 open reading frame 1
+Hs.94769	"RAB23 RAB23, member RAS oncogene family"
+Hs.96055	E2F1 E2F transcription factor 1
+Hs.9729	KIAA0239 KIAA0239 protein
+Hs.98658	BUB1 budding uninhibited by benzimidazoles 1 (yeast homolog)
+Hs.99598	MGC5338 hypothetical protein MGC5338

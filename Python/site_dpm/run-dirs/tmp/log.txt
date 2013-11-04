@@ -1,0 +1,91 @@
+2012-10-25 17:53:15,823:INFO:Options are:
+2012-10-25 17:53:15,823:INFO:                             K : 600
+2012-10-25 17:53:15,823:INFO:                       a_alpha : 10000.0
+2012-10-25 17:53:15,823:INFO:                        a_beta : 10000.0
+2012-10-25 17:53:15,823:INFO:                       a_gamma : 10000.0
+2012-10-25 17:53:15,823:INFO:                         a_tau : None
+2012-10-25 17:53:15,823:INFO:            analysis_threshold : 0.05
+2012-10-25 17:53:15,824:INFO:                       b_alpha : 1000.0
+2012-10-25 17:53:15,824:INFO:                        b_beta : 10000.0
+2012-10-25 17:53:15,824:INFO:                       b_gamma : 10000.0
+2012-10-25 17:53:15,824:INFO:      document_topic_threshold : 5.0
+2012-10-25 17:53:15,824:INFO:   go_evidence_codes_to_ignore : set([])
+2012-10-25 17:53:15,824:INFO:                 go_ontologies : ('BP', 'MF', 'CC')
+2012-10-25 17:53:15,824:INFO:          go_p_value_threshold : 1e-05
+2012-10-25 17:53:15,824:INFO:           hit_count_threshold : 0.25
+2012-10-25 17:53:15,825:INFO:                        masked : True
+2012-10-25 17:53:15,825:INFO:                     max_iters : 120
+2012-10-25 17:53:15,825:INFO:                     min_iters : 10
+2012-10-25 17:53:15,825:INFO:         num_bootstrap_samples : 100
+2012-10-25 17:53:15,825:INFO:                    output_dir : run-dirs/tmp
+2012-10-25 17:53:15,825:INFO:               r_console_width : 240
+2012-10-25 17:53:15,825:INFO:              remome_threshold : 100
+2012-10-25 17:53:15,825:INFO:symatlas_fold_change_threshold : 10.0
+2012-10-25 17:53:15,826:INFO:                  topgo_method : classic
+2012-10-25 17:53:15,826:INFO:          topic_word_threshold : 5.0
+2012-10-25 17:53:15,826:INFO:          ucsc_use_masked_seqs : True
+2012-10-25 17:53:15,826:INFO:                 use_max_chain : False
+2012-10-25 17:53:15,826:INFO:                 use_ucsc_seqs : True
+2012-10-25 17:53:15,826:INFO:Initialising cache directory.
+2012-10-25 17:53:15,826:INFO:Making directory: run-dirs/tmp/cache
+2012-10-25 17:53:15,827:INFO:cache_dir: run-dirs/tmp/cache
+2012-10-25 17:53:48,610:INFO:Options are:
+2012-10-25 17:53:48,611:INFO:                             K : 600
+2012-10-25 17:53:48,611:INFO:                       a_alpha : 10000.0
+2012-10-25 17:53:48,611:INFO:                        a_beta : 10000.0
+2012-10-25 17:53:48,611:INFO:                       a_gamma : 10000.0
+2012-10-25 17:53:48,611:INFO:                         a_tau : None
+2012-10-25 17:53:48,611:INFO:            analysis_threshold : 0.05
+2012-10-25 17:53:48,611:INFO:                       b_alpha : 1000.0
+2012-10-25 17:53:48,611:INFO:                        b_beta : 10000.0
+2012-10-25 17:53:48,611:INFO:                       b_gamma : 10000.0
+2012-10-25 17:53:48,611:INFO:      document_topic_threshold : 5.0
+2012-10-25 17:53:48,611:INFO:   go_evidence_codes_to_ignore : set([])
+2012-10-25 17:53:48,611:INFO:                 go_ontologies : ('BP', 'MF', 'CC')
+2012-10-25 17:53:48,611:INFO:          go_p_value_threshold : 1e-05
+2012-10-25 17:53:48,611:INFO:           hit_count_threshold : 0.25
+2012-10-25 17:53:48,611:INFO:                        masked : True
+2012-10-25 17:53:48,611:INFO:                     max_iters : 120
+2012-10-25 17:53:48,612:INFO:                     min_iters : 10
+2012-10-25 17:53:48,612:INFO:         num_bootstrap_samples : 100
+2012-10-25 17:53:48,612:INFO:                    output_dir : run-dirs/tmp
+2012-10-25 17:53:48,612:INFO:               r_console_width : 240
+2012-10-25 17:53:48,612:INFO:              remome_threshold : 100
+2012-10-25 17:53:48,612:INFO:symatlas_fold_change_threshold : 10.0
+2012-10-25 17:53:48,612:INFO:                  topgo_method : classic
+2012-10-25 17:53:48,612:INFO:          topic_word_threshold : 5.0
+2012-10-25 17:53:48,612:INFO:          ucsc_use_masked_seqs : True
+2012-10-25 17:53:48,612:INFO:                 use_max_chain : False
+2012-10-25 17:53:48,612:INFO:                 use_ucsc_seqs : True
+2012-10-25 17:53:48,612:INFO:Initialising cache directory.
+2012-10-25 17:53:48,612:INFO:cache_dir: run-dirs/tmp/cache
+2013-08-23 11:18:14,984:INFO:Options are:
+2013-08-23 11:18:14,984:INFO:                             K : 600
+2013-08-23 11:18:14,984:INFO:                       a_alpha : 10000.0
+2013-08-23 11:18:14,984:INFO:                        a_beta : 10000.0
+2013-08-23 11:18:14,984:INFO:                       a_gamma : 10000.0
+2013-08-23 11:18:14,984:INFO:                         a_tau : None
+2013-08-23 11:18:14,984:INFO:            analysis_threshold : 0.05
+2013-08-23 11:18:14,984:INFO:                       b_alpha : 1000.0
+2013-08-23 11:18:14,985:INFO:                        b_beta : 10000.0
+2013-08-23 11:18:14,985:INFO:                       b_gamma : 10000.0
+2013-08-23 11:18:14,985:INFO:      document_topic_threshold : 5.0
+2013-08-23 11:18:14,985:INFO:   go_evidence_codes_to_ignore : set([])
+2013-08-23 11:18:14,985:INFO:                 go_ontologies : ('BP', 'MF', 'CC')
+2013-08-23 11:18:14,985:INFO:          go_p_value_threshold : 1e-05
+2013-08-23 11:18:14,985:INFO:           hit_count_threshold : 0.25
+2013-08-23 11:18:14,985:INFO:                        masked : True
+2013-08-23 11:18:14,985:INFO:                     max_iters : 120
+2013-08-23 11:18:14,985:INFO:                     min_iters : 10
+2013-08-23 11:18:14,985:INFO:         num_bootstrap_samples : 100
+2013-08-23 11:18:14,985:INFO:                    output_dir : run-dirs/tmp
+2013-08-23 11:18:14,985:INFO:               r_console_width : 240
+2013-08-23 11:18:14,985:INFO:              remome_threshold : 100
+2013-08-23 11:18:14,985:INFO:symatlas_fold_change_threshold : 10.0
+2013-08-23 11:18:14,985:INFO:                  topgo_method : classic
+2013-08-23 11:18:14,986:INFO:          topic_word_threshold : 5.0
+2013-08-23 11:18:14,986:INFO:          ucsc_use_masked_seqs : True
+2013-08-23 11:18:14,986:INFO:                 use_max_chain : False
+2013-08-23 11:18:14,986:INFO:                 use_ucsc_seqs : True
+2013-08-23 11:18:14,986:INFO:Initialising cache directory.
+2013-08-23 11:18:14,986:INFO:cache_dir: run-dirs/tmp/cache

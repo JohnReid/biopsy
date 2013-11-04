@@ -1,0 +1,250 @@
+#!/python - make JEdit recognise this as python code
+
+import os, os.path, biopsy
+
+def clean_remome( target, source, env ):
+	import biopsy
+	assert len( target ) == len( source ) == 1
+	r = biopsy.Remome.load( str( source[0] ) )
+	older_genes_file = os.path.splitext( str(source[0]) )[0] + '.old_genes'
+	older_genes = biopsy.create_older_gene_set( older_genes_file )
+	biopsy.remove_older_versioned_sequences( r )
+	biopsy.remove_older_aligned_sequences( r, older_genes )
+	r.serialise( str( target[0] ) )
+	return None
+	
+def write_centre_sequences( target, source, env ):
+	import biopsy
+	assert len( target ) == len( source ) == 1
+	centre_file = open( str( target[0] ), 'w' )
+	r = biopsy.Remome.load( str( source[0] ) )
+	for s in r.get_aligned_sequences():
+		centre_file.write( str( s.centre_sequence ) )
+		centre_file.write( '\n' )
+	centre_file.close()
+	return None
+	
+	
+def write_centre_sequence_genes( target, source, env ):
+	import biopsy
+	assert len( target ) == len( source ) == 1
+	r = biopsy.Remome.deserialise( str( source[0] ) )
+	open( str( target[0] ), 'w' ).write( 
+		'\n'.join( 
+			str( s ) 
+			for s in biopsy.get_remome_centre_sequence_genes( r )
+		)
+	)
+	return None
+
+def write_unique_genes( target, source, env ):
+	import biopsy
+	assert len( target ) == len( source ) == 1
+	f = open( str( target[0] ), 'w' )
+	for g in biopsy.get_gene_universe( str( source[0] ) ):
+		f.write( g )
+		f.write( '\n' )
+	f.close()
+	return None
+	
+def analyse( target, source, env ):
+	import biopsy
+	assert len( target ) == len( source ) == 1
+	print 'Loading remome from %s' % ( str( source[0] ) )
+	r = biopsy.Remome.deserialise( str( source[0] ) )
+	analysis = biopsy.RemomeAnalysis( r )
+	
+	pssms = biopsy.get_transfac_pssm_accessions( 
+		biopsy.get_default_transfac_pssm_filter()
+	)
+	threshold = float( env[ 'ANALYSIS_THRESHOLD' ] )
+	phylo_threshold = float( env[ 'PHYLO_THRESHOLD' ] )
+	
+	analysis.analyse_and_serialise(
+		str( target[0] ),
+		pssms,
+		threshold,
+		phylo_threshold )
+	return None
+	
+	
+
+def pair_analysis( target, source, env ):
+	import biopsy
+	assert len( target ) == len( source ) == 1
+	remome_file = os.path.splitext( str(source[0]) )[0] + '.cleaned'
+	pair_dists = biopsy.pair_analysis( 
+		remome_file, 
+		str( source[0] ), 
+		env[ 'PAIRS_MAX_DISTANCE' ],
+		location_filter = biopsy.get_default_pair_filter(
+			family_file = env[ 'FAMILY_FILE' ],
+			paralog_file = env[ 'PARALOG_FILE' ],
+			subtypes = [
+				# 'Fungi/Metazoa group',
+				# 'Coelomata',
+				# 'Bilateria',
+				# 'Chordata',
+				# 'Amniota',
+				# 'Tetrapoda',
+				'Euteleostomi',
+				'Theria',
+				'Eutheria',
+				'Euarchontoglires',
+				'Murinae',
+				'Mus musculus',
+			]
+		)
+	)
+	# biopsy.save(
+	# 	pair_dists,
+	# 	str(target[0]),
+	# 	display = 'pair distributions',
+	# 	protocol = 0
+	# )
+	# # load all pair analyses
+	# pair_dists = biopsy.load( str(source[0]), display = 'pairs' )
+	
+	# calculate log odds ratios for each pair
+	pairs = biopsy.calculate_pair_log_odds( pair_dists )
+	
+	# biopsy.save( analyses, str(target[0]), display = 'pairs log odds' )
+	# # load all pair analyses
+	# pairs = biopsy.load( str(source[0]), display = 'pairs log odds' )
+	
+	# interesting pairs are the ones with a log odds ratio below
+	# threshold
+	interesting_pairs = [ 
+		p
+		for p
+		in pairs 
+		if p.log_odds_ratio < env[ 'LOR_THRESHOLD' ]
+	]
+	biopsy.save( interesting_pairs, str(target[0]), display = 'top pairs' )
+	
+	# Write best pair images to sub-directory
+	biopsy.write_pair_separation_histograms( 
+		pairs[:env[ 'NUM_TOP_PAIRS' ]], 
+		os.path.join( os.path.dirname( str( target[0] ) ), 'top_pairs' )
+	)
+	# Write worst pair images to sub-directory
+	biopsy.write_pair_separation_histograms( 
+		pairs[-env[ 'NUM_TOP_PAIRS' ]:], 
+		os.path.join( os.path.dirname( str( target[0] ) ), 'bottom_pairs' )
+	)
+
+	return None
+	
+	
+if 'nt' == os.name:
+    perl_script_dir = 'C:\\Dev\\MyProjects\\Bio\\Perl'
+else:
+    perl_script_dir = '/home/reid/Dev/MyProjects/Bio/Perl'
+
+	
+parsed_builder = Builder(
+	action = 'parse_remos -r $SOURCE -o $TARGET',
+	suffix = '.parsed',
+	src_suffix = '.extraction'
+)
+
+filtered_builder = Builder(
+	action = 'filter_remos -e 1 -r $SOURCE -o $TARGET',
+	suffix = '.filtered',
+	src_suffix = '.parsed'
+)
+
+centre_sequences_builder = Builder(
+	action = write_centre_sequences,
+	suffix = '.centre_seqs',
+	src_suffix = '.filtered'
+)
+
+old_genes_builder = Builder(
+	action = '%s %s <$SOURCE >$TARGET' % (
+		'perl',
+		os.path.join(perl_script_dir, 'gene_id_history.pl')
+	),
+	suffix = '.old_genes',
+	src_suffix = '.centre_seqs'
+)
+
+cleaned_builder = Builder(
+	action = clean_remome,
+	suffix = '.cleaned',
+	src_suffix = '.filtered'
+)
+
+centre_sequence_genes_builder = Builder(
+	action = write_centre_sequence_genes,
+	suffix = '.centre_genes',
+	src_suffix = '.cleaned'
+)
+
+uniq_genes_builder = Builder(
+	action = write_unique_genes,
+	suffix = '.uniq_genes',
+	src_suffix = '.centre_genes'
+)
+
+analyse_builder = Builder(
+	action = analyse,
+	suffix = '.analysis',
+	src_suffix = '.cleaned'
+)
+
+pairs_builder = Builder(
+	action = pair_analysis,
+	suffix = '.top_pairs',
+	src_suffix = '.analysis'
+)
+
+
+
+
+env = Environment(
+	BUILDERS =
+	{
+		'Parse' : parsed_builder,
+		'Filter' : filtered_builder,
+		'CentreSequences' : centre_sequences_builder,
+		'OldGenes' : old_genes_builder,
+		'Clean' : cleaned_builder,
+		'CentreSequenceGenes' : centre_sequence_genes_builder,
+		'UniqGenes' : uniq_genes_builder,
+		'Analyse' : analyse_builder,
+		'Pairs' : pairs_builder,
+	},
+	ENV = os.environ
+)
+env[ 'ANALYSIS_THRESHOLD' ] = float( 0.01 )
+env[ 'PHYLO_THRESHOLD' ] = float( 0.01 )
+env[ 'PAIRS_MAX_DISTANCE' ] = int( 45 )
+env[ 'NUM_TOP_PAIRS' ] = int( 50 )
+env[ 'LOR_THRESHOLD' ] = float( -1.0 )
+env[ 'PARALOG_FILE' ] = 'C:/Data/Ensembl/mouse_paralogs.txt'
+env[ 'FAMILY_FILE' ] = 'C:/Data/Ensembl/mouse_families.txt'
+
+def get_file_for_belief( belief ):
+    return os.path.join(biopsy.get_data_dir(), 'ReMos', '%d' % belief, '%d' % belief)
+	
+belief = int( ARGUMENTS.get('belief', 100) )
+
+remo_file = get_file_for_belief( int( belief ) )
+
+env.Parse( remo_file )
+env.Filter( remo_file )
+env.CentreSequences( remo_file )
+env.OldGenes( remo_file )
+env.Clean( remo_file )
+env.CentreSequenceGenes( remo_file )
+env.UniqGenes( remo_file )
+env.Analyse( remo_file )
+env.Pairs( remo_file )
+
+Default( [
+	get_file_for_belief( belief ) + '.old_genes',
+	get_file_for_belief( belief ) + '.uniq_genes',
+	get_file_for_belief( belief ) + '.top_pairs',
+] )
+

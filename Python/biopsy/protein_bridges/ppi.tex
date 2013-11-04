@@ -1,0 +1,73 @@
+\documentclass[a4paper,11pt]{article}
+
+% \linespread{1.6}
+
+% define the title
+\author{John Reid}
+\title{Protein-protein interaction bridges}
+\usepackage[english,UKenglish]{babel}
+% \usepackage{amsfonts}
+% \usepackage{graphics}
+% \usepackage[pdftex]{hyperref}
+
+%
+% for graphical models
+%
+% \usepackage{pst-all} % PSTricks
+% \usepackage{graphics} % \rotatebox
+% \usepackage{com.braju.graphicalmodels}
+% \catcode`\@=11%
+
+%\hyphenation{asso-ciated}
+
+\begin{document}
+
+\maketitle
+
+\begin{itemize}
+\item \emph{Input}
+
+We take a set of remos, where each remo is a set of phylogenetically conserved sequences (mouse is the centre sequence). We also take the BIND protein-protein interaction network for mouse.
+
+\item \emph{BiFa analysis}
+
+Analyse all the remos using the Bifa tool using a threshold of 0.01 and a phylogenetic threshold of 0.001.
+
+\item \emph{Map BiFa analysis to proteins}
+
+Each hit in the BiFa analysis is associated with a PSSM in TRANSFAC. These PSSMs are associated with genes which in turn are mapped to Ensembl gene identifiers. These are mapped to MGI identifiers which have Entrez protein identifiers associated with them. (All this using data from TRANSFAC, Ensembl and MGI).
+For each set of interesting remos, e.g. 'prr-remo\_9-remo\_11' (i.e. consider the promoter, together with remos 9 and 11).
+
+\item \emph{Find putative binders in protein-protein interaction network}
+
+Using the Entrez protein identifier we can locate proteins in a protein-protein interaction network (PPI network) that are associated with each remo. We'll call the set of such proteins for each remo the \emph{binders}.
+
+\item \emph{Find bridging proteins}
+
+We're only interested in those proteins that are on a path between different remos' binders in the protein-protein interaction network. We need the distance from each remo's set of binders to each protein in the network. Once we've calculated this we know which 2 remos are closest to this protein. If the sum of these 2 distances is less than some constant (typically 2 or 3) we leave the protein in the network, otherwise we discard it.
+
+\item \emph{Output}
+
+Our PPI network has been reduced to just those proteins that bind directly to the remos and those that potentially bridge the remos. We add nodes to represent each remo and connect these to their binders and output this graph:
+
+\verb+protein_bridge_length-<max path length>_<remos>.svg+
+
+We also output the BiFa analysis for each in its standard format. In addition we re-run the BiFa analysis limiting it to those PSSMs that were mapped into the PPI network. This makes it clearer which hits have generated the protein bridge graph. This is in the file:
+
+\verb+bifa_analysis_<remo name>_just_bridge_proteins.svg+
+
+and the original analysis is in the file:
+
+\verb+bifa_analysis_<remo name>.svg+
+
+We provide a text file mapping the PSSM names to the Entrez protein names for each remo's analysis:
+
+\verb+<remo name>_hits_to_proteins.txt+
+
+This is also to enable you to better identify which hits have resulted in which proteins in the protein bridge graph.
+
+
+\end{itemize}
+
+\end{document}
+

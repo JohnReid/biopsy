@@ -1,0 +1,3 @@
+epydoc -v -o docs/python --html -n "Transcriptional programs" *.py
+rmdir cache/ programs/ summaries/
+rm log.txt

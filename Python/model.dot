@@ -1,0 +1,18 @@
+digraph G {
+0 [label="state = 0"];
+1 [label="state = 1"];
+2 [label="state = 2"];
+3 [label="state = 3"];
+4 [label="state = 4"];
+5 [label="state = 5"];
+6 [label="state = 6"];
+0->0  [label="0.800"];
+0->1  [label="0.100"];
+0->6  [label="0.100"];
+1->2  [label="1.000"];
+2->3  [label="1.000"];
+3->0  [label="1.000"];
+4->5  [label="1.000"];
+5->6  [label="1.000"];
+6->0  [label="1.000"];
+}

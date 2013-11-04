@@ -1,0 +1,30 @@
+#!/usr/bin/env python
+
+"""
+Ensures all PSSMs are in PSSM cache.
+"""
+
+import biopsy, logging, sys
+
+logging.basicConfig(level=logging.INFO)
+
+def ensure_in_cache(acc):
+    try:
+        logging.debug('Ensuring %s is in pssm cache', acc)
+        biopsy.pssm.get_pssm(acc)
+    except RuntimeError:
+        logging.warning('Problem with %s: %s: %s', acc, sys.exc_info()[0].__name__, sys.exc_info()[1])
+
+if len(sys.argv) > 1:
+    logging.info('Ensuring PSSMs on command line are in cache')
+    pssms = sys.argv[1:]
+else:
+    logging.info('Ensuring all PSSMs are in cache')
+    pssms = biopsy.transfac.PssmFilter.all_pssms()
+
+for pssm in pssms:
+    ensure_in_cache(acc)
+
+logging.info('Saving PSSM cache.')
+biopsy.pssm.save_pssm_cache_state()
+

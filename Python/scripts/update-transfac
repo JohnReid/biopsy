@@ -1,0 +1,13 @@
+#!/bin/bash -e
+
+#
+# Update serialised data files and caches for a new TRANSFAC/TRANSCompel release
+#
+SERIALISED_DIR=$HOME/Data/serialised
+parse_transfac
+rm $SERIALISED_DIR/factor_synonyms.txt
+factor_synonyms
+update-pssm-cache
+calculate_pssm_likelihoods
+[ -f $SERIALISED_DIR/species_hmm.txt ] && calculate_normalisations # Doesn't work without species_hmm.txt
+

@@ -1,0 +1,779 @@
+UGCluster	Name
+Hs.100293	OGT O-linked N-acetylglucosamine (GlcNAc) transferase (UDP-N-acetylglucosamine:polypeptide-N-acetylglucosaminyl transferase)
+Hs.100469	"MLLT4 myeloid/lymphoid or mixed-lineage leukemia (trithorax (Drosophila) homolog); translocated to, 4"
+Hs.101014	 ESTs
+Hs.101514	FLJ10342 hypothetical protein FLJ10342
+Hs.101799	KIAA1350 KIAA1350 protein
+Hs.102004	 ESTs
+Hs.102237	TUSP tubby super-family protein
+Hs.102336	ARHGAP8 Rho GTPase activating protein 8
+Hs.102419	LOC51042 zinc finger protein
+Hs.102941	" Homo sapiens cDNA: FLJ21531 fis, clone COL06036"
+Hs.104123	 EST
+Hs.10432	KIAA0878 KIAA0878 protein
+Hs.104640	FBI1 HIV-1 inducer of short transcripts binding protein; lymphoma related factor
+Hs.104741	TOPK PDZ-binding kinase; T-cell originated protein kinase
+Hs.104859	DKFZp762E1312 hypothetical protein DKFZp762E1312
+Hs.105298	 EST
+Hs.105509	CTL2 CTL2 gene
+Hs.105826	 ESTs
+Hs.106019	"PPP1R10 protein phosphatase 1, regulatory subunit 10"
+Hs.106101	FLJ22557 hypothetical protein FLJ22557
+Hs.106129	 ESTs
+Hs.106486	" ESTs, Moderately similar to Inactivation Gate Of Potassium Channel Raw3, Nmr, 8 Structures {SUB 1-30 [H.sapiens]"
+Hs.106768	FLJ10511 hypothetical protein FLJ10511
+Hs.107318	KMO kynurenine 3-monooxygenase (kynurenine 3-hydroxylase)
+Hs.107474	NAB1 NGFI-A binding protein 1 (EGR1 binding protein 1)
+Hs.108196	LOC51659 HSPC037 protein
+Hs.108319	"TRAP150 thyroid hormone receptor-associated protein, 150 kDa subunit"
+Hs.10842	"RAN RAN, member RAS oncogene family"
+Hs.108824	MGC10540 hypothetical protein MGC10540
+Hs.108854	HSPC163 HSPC163 protein
+Hs.109225	VCAM1 vascular cell adhesion molecule 1
+Hs.109727	TAB2 TAK1-binding protein 2
+Hs.110757	D21S2056E DNA segment on chromosome 21 (unique) 2056 expressed sequence
+Hs.11135	"HLA-DNA major histocompatibility complex, class II, DN alpha"
+Hs.111471	 ESTs
+Hs.111496	" Homo sapiens cDNA FLJ11643 fis, clone HEMBA1004366"
+Hs.111676	H11 protein kinase H11
+Hs.112160	PIF1 DNA helicase homolog PIF1
+Hs.112570	 ESTs
+Hs.11260	FLJ11264 hypothetical protein FLJ11264
+Hs.113029	RPS25 ribosomal protein S25
+Hs.11355	TMPO thymopoietin
+Hs.11393	RAD51C RAD51 (S. cerevisiae) homolog C
+Hs.113994	" Homo sapiens cDNA FLJ20796 fis, clone COL00301"
+Hs.114055	 ESTs
+Hs.114311	"CDC45L CDC45 (cell division cycle 45, S.cerevisiae, homolog)-like"
+Hs.114360	TSC22 transforming growth factor beta-stimulated protein TSC-22
+Hs.114905	ERN2 ER to nucleus signalling 2
+Hs.115315	 ESTs
+Hs.116174	 EST
+Hs.116244	DKFZP434J046 DKFZP434J046 protein
+Hs.116278	" Homo sapiens cDNA FLJ13571 fis, clone PLACE1008405"
+Hs.117261	 ESTs
+Hs.117269	 ESTs
+Hs.117305	dJ383J4.3 hypothetical gene supported by BC007071
+Hs.117715	MGC10850 hypothetical protein MGC10850
+Hs.117949	" ESTs, Moderately similar to A46010 X-linked retinopathy protein [H.sapiens]"
+Hs.118064	NUCKS similar to rat nuclear ubiquitous casein kinase 2
+Hs.118338	" ESTs, Weakly similar to UOG1_HUMAN UOG-1 PROTEIN [H.sapiens]"
+Hs.118552	FLJ20539 hypothetical protein FLJ20539
+Hs.118666	PP591 hypothetical protein PP591
+Hs.118793	FLJ10688 hypothetical protein FLJ10688
+Hs.118797	UBE2D3 ubiquitin-conjugating enzyme E2D 3 (homologous to yeast UBC4/5)
+Hs.118825	MAP2K6 mitogen-activated protein kinase kinase 6
+Hs.118910	TSG101 tumor susceptibility gene 101
+Hs.11899	HMGCR 3-hydroxy-3-methylglutaryl-Coenzyme A reductase
+Hs.11902	MYLE MYLE protein
+Hs.119122	RPL13A ribosomal protein L13a
+Hs.1192	KIAA0074 KIAA0074 protein
+Hs.119324	KNSL4 kinesin-like 4
+Hs.120605	 ESTs
+Hs.120734	 ESTs
+Hs.120946	" ESTs, Weakly similar to I52523 nucleoporin p62 homolog - rat [R.norvegicus]"
+Hs.121025	C11orf5 chromosome 11 open reading frame 5
+Hs.121073	FLJ10466 hypothetical protein FLJ10466
+Hs.12150	LOC51170 retinal short-chain dehydrogenase/reductase retSDR2
+Hs.1219	"ADH4 alcohol dehydrogenase 4 (class II), pi polypeptide"
+Hs.12239	LOC51004 CGI-10 protein
+Hs.122444	 ESTs
+Hs.122552	GTSE1 G-2 and S-phase expressed 1
+Hs.122579	FLJ10461 hypothetical protein FLJ10461
+Hs.122843	CASP8AP2 CASP8 associated protein 2
+Hs.123253	FLJ22009 hypothetical protein FLJ22009
+Hs.123654	PCF11 PCF11p homolog
+Hs.12373	ADCY6 adenylate cyclase 6
+Hs.124027	SPS SELENOPHOSPHATE SYNTHETASE ; Human selenium donor protein
+Hs.124106	" Homo sapiens cDNA FLJ11941 fis, clone HEMBB1000649"
+Hs.124169	 ESTs
+Hs.12461	LCHN LCHN protein
+Hs.125407	" ESTs, Moderately similar to A47582 B-cell growth factor precursor [H.sapiens]"
+Hs.126639	" ESTs, Weakly similar to T20262 hypothetical protein C55A6.2 - Caenorhabditis elegans [C.elegans]"
+Hs.126666	HOXB4 homeo box B4
+Hs.126714	 ESTs
+Hs.126774	RAMP RA-regulated nuclear matrix-associated protein
+Hs.12705	" Homo sapiens, clone MGC:4710 IMAGE:3534806, mRNA, complete cds"
+Hs.127054	 ESTs
+Hs.127453	" ESTs, Weakly similar to CGHU6C collagen alpha 1(II) chain precursor [H.sapiens]"
+Hs.127703	 ESTs
+Hs.127797	" Homo sapiens cDNA FLJ11381 fis, clone HEMBA1000501"
+Hs.128096	" Homo sapiens, Similar to RIKEN cDNA 2700064H14 gene, clone MGC:21390 IMAGE:4519078, mRNA, complete cds"
+Hs.1282	C6 complement component 6
+Hs.12871	LOC54104 hypothetical protein
+Hs.129055	ODF2 outer dense fibre of sperm tails 2
+Hs.129165	 ESTs
+Hs.130214	 ESTs
+Hs.130435	 ESTs
+Hs.13046	TXNRD1 thioredoxin reductase 1
+Hs.130460	 ESTs
+Hs.13075	MGC3207 hypothetical protein MGC3207
+Hs.131899	" ESTs, Weakly similar to T00370 hypothetical protein KIAA0659 [H.sapiens]"
+Hs.132493	 ESTs
+Hs.13264	KIAA0856 KIAA0856 protein
+Hs.133294	 ESTs
+Hs.13421	KIAA0056 KIAA0056 protein
+Hs.134403	FLJ10858 hypothetical protein FLJ10858
+Hs.134514	"ABCA7 ATP-binding cassette, sub-family A (ABC1), member 7"
+Hs.13479	FLJ20847 hypothetical protein FLJ20847
+Hs.134999	"H2AFN H2A histone family, member N"
+Hs.13525	HSPC216 hypothetical protein
+Hs.135276	 ESTs
+Hs.135448	 EST
+Hs.137260	FLJ23151 hypothetical protein FLJ23151
+Hs.13740	" Homo sapiens, clone MGC:21518 IMAGE:3900532, mRNA, complete cds"
+Hs.139226	RFC2 replication factor C (activator 1) 2 (40kD)
+Hs.13996	" Homo sapiens cDNA: FLJ23260 fis, clone COL05804, highly similar to HSU90911 Human clone 23652 mRNA sequence"
+Hs.14014	FLJ14813 hypothetical protein FLJ14813
+Hs.140452	TIP47 cargo selection protein (mannose 6 phosphate receptor binding protein)
+Hs.141003	" Homo sapiens cDNA: FLJ21691 fis, clone COL09555"
+Hs.14139	" ESTs, Weakly similar to JC5314 CDC28/cdc2-like kinase associating arginine-serine cyclophilin [H.sapiens]"
+Hs.142157	"TTF2 transcription termination factor, RNA polymerase II"
+Hs.14235	FLJ20008 hypothetical protein FLJ20008
+Hs.142442	HP1-BP74 HP1-BP74
+Hs.143080	"H4FI H4 histone family, member I"
+Hs.143102	"AOC2 amine oxidase, copper containing 2 (retina-specific)"
+Hs.144614	" ESTs, Highly similar to A56429 I-kappa-B-related protein [H.sapiens]"
+Hs.144662	" ESTs, Moderately similar to ALU1_HUMAN ALU SUBFAMILY J SEQUENCE CONTAMINATION WARNING ENTRY [H.sapiens]"
+Hs.144796	 ESTs
+Hs.145061	 Homo sapiens clone CDABP0155 mRNA sequence
+Hs.145383	 ESTs
+Hs.14559	FLJ10540 hypothetical protein FLJ10540
+Hs.146276	 ESTs
+Hs.146329	"CHEK2 CHK2 (checkpoint, S.pombe) homolog"
+Hs.146409	"CDC42 cell division cycle 42 (GTP-binding protein, 25kD)"
+Hs.14743	 ESTs
+Hs.147663	"PTPN9 protein tyrosine phosphatase, non-receptor type 9"
+Hs.147907	" EST, Moderately similar to E Chain E, Human Pcn [H.sapiens]"
+Hs.148101	MSE55 serum constituent protein
+Hs.14870	MGC14386 similar to cyclin-E binding protein 1 (H. sapiens)
+Hs.149152	KIAA1929 KIAA1929 protein
+Hs.149260	 EST
+Hs.149338	 EST
+Hs.149436	KIF5B kinesin family member 5B
+Hs.150325	 ESTs
+Hs.150557	BTEB1 basic transcription element binding protein 1
+Hs.150623	 ESTs
+Hs.15091	" Homo sapiens, clone IMAGE:4810400, mRNA"
+Hs.15125	FLJ20699 hypothetical protein FLJ20699
+Hs.151343	KIAA1524 KIAA1524 protein
+Hs.151411	KIAA0916 KIAA0916 protein
+Hs.15259	BAG3 BCL2-associated athanogene 3
+Hs.152931	LBR lamin B receptor
+Hs.153221	"SS18 synovial sarcoma translocation, chromosome 18"
+Hs.153479	"KIAA0165 extra spindle poles, S. cerevisiae, homolog of"
+Hs.153684	FRZB frizzled-related protein
+Hs.153704	NEK2 NIMA (never in mitosis gene a)-related kinase 2
+Hs.153752	CDC25B cell division cycle 25B
+Hs.15386	" ESTs, Weakly similar to A59266 unconventional myosin-15 [H.sapiens]"
+Hs.153884	APACD ATP binding protein associated with cell differentiation
+Hs.154149	APEXL2 apurinic/apyrimidinic endonuclease(APEX nuclease)-like 2 protein
+Hs.154621	 EST
+Hs.154938	MDS025 hypothetical protein MDS025
+Hs.155040	ZNF217 zinc finger protein 217
+Hs.155396	NFE2L2 nuclear factor (erythroid-derived 2)-like 2
+Hs.155489	NSAP1 NS1-associated protein 1
+Hs.155545	P37NB 37 kDa leucine-rich repeat (LRR) protein
+Hs.155597	DF D component of complement (adipsin)
+Hs.155912	CDH24 cadherin-like 24
+Hs.155983	KIAA0677 KIAA0677 gene product
+Hs.15607	"FANCD2 Fanconi anemia, complementation group D2"
+Hs.156148	FLJ13231 hypothetical protein FLJ13231
+Hs.157148	MGC13204 hypothetical protein MGC13204
+Hs.157461	LOC51334 mesenchymal stem cell protein DSC54
+Hs.15767	"CIT citron (rho-interacting, serine/threonine kinase 21)"
+Hs.1578	BIRC5 baculoviral IAP repeat-containing 5 (survivin)
+Hs.158195	HSF2 heat shock transcription factor 2
+Hs.158225	PKNOX1 PBX/knotted 1 homeobox 1
+Hs.158357	 ESTs
+Hs.1592	"CDC16 CDC16 (cell division cycle 16, S. cerevisiae, homolog)"
+Hs.159971	"SMARCB1 SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily b, member 1"
+Hs.16244	DEEPEST mitotic spindle coiled-coil related protein
+Hs.162808	"PIK3CD phosphoinositide-3-kinase, catalytic, delta polypeptide"
+Hs.163921	 ESTs
+Hs.1640	"COL7A1 collagen, type VII, alpha 1 (epidermolysis bullosa, dystrophic, dominant and recessive)"
+Hs.165607	 ESTs
+Hs.165662	KIAA0675 KIAA0675 gene product
+Hs.165909	" ESTs, Weakly similar to TRHY_HUMAN TRICHOHYALI [H.sapiens]"
+Hs.166011	"CTNND1 catenin (cadherin-associated protein), delta 1"
+Hs.166017	MITF microphthalmia-associated transcription factor
+Hs.166539	 ESTs
+Hs.16697	"DR1 down-regulator of transcription 1, TBP-binding (negative cofactor 2)"
+Hs.166975	"SFRS5 splicing factor, arginine/serine-rich 5"
+Hs.167460	"SFRS3 splicing factor, arginine/serine-rich 3"
+Hs.169001	C21orf15 chromosome 21 open reading frame 15
+Hs.169370	"FYN FYN oncogene related to SRC, FGR, YES"
+Hs.169718	CNN2 calponin 2
+Hs.169832	ZNF42 zinc finger protein 42 (myeloid-specific retinoic acid- responsive)
+Hs.170027	"MDM2 mouse double minute 2, human homolog of; p53-binding protein"
+Hs.170129	CHML choroideremia-like (Rab escort protein 2)
+Hs.171545	HRB HIV-1 Rev binding protein
+Hs.171814	PTMS parathymosin
+Hs.171872	DDX8 DEAD/H (Asp-Glu-Ala-Asp/His) box polypeptide 8 (RNA helicase)
+Hs.172405	CDC27 cell division cycle 27
+Hs.172572	FLJ20093 hypothetical protein FLJ20093
+Hs.172589	PWP1 nuclear phosphoprotein similar to S. cerevisiae PWP1
+Hs.172652	KIAA0013 KIAA0013 gene product
+Hs.173091	UBL3 ubiquitin-like 3
+Hs.173288	KIAA0155 KIAA0155 gene product
+Hs.173495	" ESTs, Moderately similar to ALU1_HUMAN ALU SUBFAMILY J SEQUENCE CONTAMINATION WARNING ENTRY [H.sapiens]"
+Hs.173714	KIAA0026 MORF-related gene X
+Hs.173933	NFIA nuclear factor I/A
+Hs.175613	CLASPIN homolog of Xenopus Claspin
+Hs.176600	HAN11 WD-repeat protein
+Hs.176950	 ESTs
+Hs.177258	PRO0650 PRO0650 protein
+Hs.17731	FLJ12892 hypothetical protein FLJ12892
+Hs.177688	MGC4161 hypothetical protein MGC4161
+Hs.178011	FLJ20257 hypothetical protein FLJ20257
+Hs.17820	"ROCK1 Rho-associated, coiled-coil containing protein kinase 1"
+Hs.17834	DONSON downstream neighbor of SON
+Hs.178347	SKIP SKIP for skeletal muscle and kidney enriched inositol phosphatase
+Hs.178695	MAPK13 mitogen-activated protein kinase 13
+Hs.17908	"ORC1L origin recognition complex, subunit 1 (yeast homolog)-like"
+Hs.179309	 ESTs
+Hs.179397	 Homo sapiens clone 25058 mRNA sequence
+Hs.179566	FLJ22624 hypothetical protein FLJ22624
+Hs.179661	FKBP1A FK506-binding protein 1A (12kD)
+Hs.179972	FLJ10154 hypothetical protein FLJ10154
+Hs.180398	LPP LIM domain-containing preferred translocation partner in lipoma
+Hs.180414	HSPA8 heat shock 70kD protein 8
+Hs.180433	HSRTSBETA rTS beta protein
+Hs.180446	KPNB1 karyopherin (importin) beta 1
+Hs.180545	 Homo sapiens mRNA for hypothetical protein (TR2/D15 gene)
+Hs.180591	" ESTs, Weakly similar to T23976 hypothetical protein R06F6.5a - Caenorhabditis elegans [C.elegans]"
+Hs.180610	SFPQ splicing factor proline/glutamine rich (polypyrimidine tract-binding protein-associated)
+Hs.180655	STK12 serine/threonine kinase 12
+Hs.180663	KIAA1586 KIAA1586 protein
+Hs.180780	TERA TERA protein
+Hs.180817	C11orf23 chromosome 11 open reading frame 23
+Hs.181059	" ESTs, Weakly similar to 2108276A ssDNA-binding protein [R.norvegicus]"
+Hs.181195	"DNAJB6 DnaJ (Hsp40) homolog, subfamily B, member 6"
+Hs.181315	" Homo sapiens, clone IMAGE:4052451, mRNA"
+Hs.18140	 ESTs
+Hs.181466	FLJ14502 TRAF4 associated factor 1
+Hs.182545	" ESTs, Weakly similar to JU0033 hypothetical L1 protein [H.sapiens]"
+Hs.182982	KIAA0855 golgin-67
+Hs.183037	"PRKAR1A protein kinase, cAMP-dependent, regulatory, type I, alpha (tissue specific extinguisher 1)"
+Hs.18331	 ESTs
+Hs.183475	 Homo sapiens clone 25061 mRNA sequence
+Hs.183800	RANGAP1 Ran GTPase activating protein 1
+Hs.184050	KRAS2 v-Ki-ras2 Kirsten rat sarcoma 2 viral oncogene homolog
+Hs.184167	"SFRS7 splicing factor, arginine/serine-rich 7 (35kD)"
+Hs.184222	DSCR1 Down syndrome critical region gene 1
+Hs.18426	UK114 translational inhibitor protein p14.5
+Hs.184298	CDK7 cyclin-dependent kinase 7 (homolog of Xenopus MO15 cdk-activating kinase)
+Hs.184390	LOC57168 similar to aspartate beta hydroxylase (ASPH)
+Hs.1845	P5-1 MHC class I region ORF
+Hs.185705	EBI3 Epstein-Barr virus induced gene 3
+Hs.18573	"ACYP1 acylphosphatase 1, erythrocyte (common) type"
+Hs.186579	" Homo sapiens, clone IMAGE:4081483, mRNA"
+Hs.186814	" ESTs, Highly similar to MKLP_HUMAN MITOTIC KINESIN-LIKE PROTEIN [H.sapiens]"
+Hs.18724	 Homo sapiens mRNA; cDNA DKFZp564F093 (from clone DKFZp564F093)
+Hs.18740	FLJ22609 hypothetical protein FLJ22609
+Hs.187991	DKFZP564A122 DKFZP564A122 protein
+Hs.188554	 ESTs
+Hs.188697	 ESTs
+Hs.19002	MGC4675 hypothetical protein MGC4675
+Hs.19114	HMG4 high-mobility group (nonhistone chromosomal) protein 4
+Hs.193379	 ESTs
+Hs.193804	 ESTs
+Hs.193852	"ABCC2 ATP-binding cassette, sub-family C (CFTR/MRP), member 2"
+Hs.194125	 ESTs
+Hs.194143	"BRCA1 breast cancer 1, early onset"
+Hs.194369	RERE arginine-glutamic acid dipeptide (RE) repeats
+Hs.194498	MGC15482 hypothetical protein MGC15482
+Hs.194595	 ESTs
+Hs.194665	"DNA2L DNA2 (DNA replication helicase, yeast, homolog)-like"
+Hs.194718	ZNF265 zinc finger protein 265
+Hs.195175	CFLAR CASP8 and FADD-like apoptosis regulator
+Hs.19554	C1orf2 chromosome 1 open reading frame 2
+Hs.19710	"SLC17A2 solute carrier family 17 (sodium phosphate), member 2"
+Hs.197298	NS1-BP NS1-binding protein
+Hs.197540	"HIF1A hypoxia-inducible factor 1, alpha subunit (basic helix-loop-helix transcription factor)"
+Hs.198241	"AOC3 amine oxidase, copper containing 3 (vascular adhesion protein 1)"
+Hs.198443	"ITPR1 inositol 1,4,5-triphosphate receptor, type 1"
+Hs.199061	PCAF p300/CBP-associated factor
+Hs.200317	KIAA1404 KIAA1404 protein
+Hs.200483	" ESTs, Weakly similar to KIAA1074 protein [H.sapiens]"
+Hs.20132	STAG3 stromal antigen 3
+Hs.20142	PNAS-127 PNAS-127 protein
+Hs.201672	ARL4 ADP-ribosylation factor-like 4
+Hs.20237	DKFZP566C134 DKFZP566C134 protein
+Hs.20242	FLJ12788 hypothetical protein FLJ12788
+Hs.202596	" Homo sapiens cDNA FLJ10632 fis, clone NT2RP2005637"
+Hs.202694	LOC51055 unknown
+Hs.20315	IFIT1 interferon-induced protein with tetratricopeptide repeats 1
+Hs.203963	"HELLS helicase, lymphoid-specific"
+Hs.205227	 ESTs
+Hs.20575	 ESTs
+Hs.20776	MRPS2 mitochondrial ribosomal protein S2
+Hs.20787	" Homo sapiens cDNA: FLJ21460 fis, clone COL04722"
+Hs.208912	MGC861 hypothetical protein MGC861
+Hs.20985	"SAP30 sin3-associated polypeptide, 30kD"
+Hs.211579	MCAM melanoma cell adhesion molecule
+Hs.21198	TOMM70A translocase of outer mitochondrial membrane 70 (yeast) homolog A
+Hs.21254	TRIP TRAF interacting protein
+Hs.21320	RAD18 postreplication repair protein hRAD18p
+Hs.21321	" Homo sapiens clone FLB9213 PRO2474 mRNA, complete cds"
+Hs.214410	" ESTs, Weakly similar to MUC2_HUMAN MUCIN 2 PRECURSOR [H.sapiens]"
+Hs.21446	KIAA1716 KIAA1716 protein
+Hs.21486	"STAT1 signal transducer and activator of transcription 1, 91kD"
+Hs.215595	"GNB1 guanine nucleotide binding protein (G protein), beta polypeptide 1"
+Hs.21577	"RNUT1 RNA, U transporter 1"
+Hs.21734	 ESTs
+Hs.21739	 Homo sapiens mRNA; cDNA DKFZp586I1518 (from clone DKFZp586I1518)
+Hs.2178	"H2BFQ H2B histone family, member Q"
+Hs.218329	DJ328E19.C1.1 hypothetical protein
+Hs.21906	 Homo sapiens clone 24670 mRNA sequence
+Hs.220689	G3BP Ras-GTPase-activating protein SH3-domain-binding protein
+Hs.221197	 ESTs
+Hs.22142	LOC51700 cytochrome b5 reductase b5R.2
+Hs.221754	" ESTs, Weakly similar to 2004399A chromosomal protein [H.sapiens]"
+Hs.221847	 ESTs
+Hs.222088	MGC5254 hypothetical protein MGC5254
+Hs.222566	 ESTs
+Hs.22559	KIAA0197 KIAA0197 protein
+Hs.225767	IDN3 IDN3 protein
+Hs.225977	NCOA3 nuclear receptor coactivator 3
+Hs.226414	 ESTs
+Hs.227777	"PTP4A1 protein tyrosine phosphatase type IVA, member 1"
+Hs.227948	"SERPINB3 serine (or cysteine) proteinase inhibitor, clade B (ovalbumin), member 3"
+Hs.23044	" Homo sapiens, Similar to RIKEN cDNA 2610036L13 gene, clone MGC:16386 IMAGE:3938081, mRNA, complete cds"
+Hs.231444	" Homo sapiens, Similar to hypothetical protein PRO1722, clone MGC:15692 IMAGE:3351479, mRNA, complete cds"
+Hs.23189	" ESTs, Moderately similar to I38370 beta-tubulin [H.sapiens]"
+Hs.23193	" Homo sapiens cDNA FLJ13604 fis, clone PLACE1010401"
+Hs.23213	 ESTs
+Hs.234545	NUF2R hypothetical protein NUF2R
+Hs.23495	FLJ11252 hypothetical protein FLJ11252
+Hs.2359	DUSP4 dual specificity phosphatase 4
+Hs.237225	HT023 hypothetical protein HT023
+Hs.23740	KIAA1598 KIAA1598 protein
+Hs.23830	 ESTs
+Hs.238797	" ESTs, Moderately similar to I38022 hypothetical protein [H.sapiens]"
+Hs.238990	"CDKN1B cyclin-dependent kinase inhibitor 1B (p27, Kip1)"
+Hs.239114	"MAN1A2 mannosidase, alpha, class 1A, member 2"
+Hs.239884	"H2BFL H2B histone family, member L"
+Hs.239938	HSPC196 hypothetical protein
+Hs.240	MPHOSPH1 M-phase phosphoprotein 1
+Hs.240135	"H4FJ H4 histone family, member J"
+Hs.240443	" Homo sapiens cDNA: FLJ23538 fis, clone LNG08010, highly similar to BETA2 Human MEN1 region clone epsilon/beta mRNA"
+Hs.24064	 Homo sapiens mRNA; cDNA DKFZp586N1323 (from clone DKFZp586N1323)
+Hs.241493	NKTR natural killer-tumor recognition sequence
+Hs.241517	"POLQ polymerase (DNA directed), theta"
+Hs.242998	 ESTs
+Hs.2430	TCFL1 transcription factor-like 1
+Hs.243886	NASP nuclear autoantigenic sperm protein (histone-binding)
+Hs.24395	"SCYB14 small inducible cytokine subfamily B (Cys-X-Cys), member 14 (BRAK)"
+Hs.244613	STAT5B signal transducer and activator of transcription 5B
+Hs.245342	FLJ14642 hypothetical protein FLJ14642
+Hs.24596	PIR51 RAD51-interacting protein
+Hs.24641	CKAP2 cytoskeleton associated protein 2
+Hs.247309	"SUCLG2 succinate-CoA ligase, GDP-forming, beta subunit"
+Hs.24908	 ESTs
+Hs.24937	HSU53209 transformer-2 alpha (htra-2 alpha)
+Hs.250848	FLJ14761 hypothetical protein FLJ14761
+Hs.251574	" EST, Moderately similar to ALU8_HUMAN ALU SUBFAMILY SX SEQUENCE CONTAMINATION WARNING ENTRY [H.sapiens]"
+Hs.251653	"TUBB2 tubulin, beta, 2"
+Hs.25245	FLJ11269 hypothetical protein FLJ11269
+Hs.252587	PTTG1 pituitary tumor-transforming 1
+Hs.25303	FLJ13154 hypothetical protein FLJ13154
+Hs.25497	MNT MAX binding protein
+Hs.25625	FLJ11323 hypothetical protein FLJ11323
+Hs.25726	LOC58486 transposon-derived Buster1 transposase-like protein
+Hs.25933	 ESTs
+Hs.26096	" ESTs, Weakly similar to T29361 hypothetical protein R05G6.10 - Caenorhabditis elegans [C.elegans]"
+Hs.261494	" ESTs, Moderately similar to Y481_HUMAN HYPOTHETICAL PROTEIN KIAA0481 [H.sapiens]"
+Hs.262476	AMD1 S-adenosylmethionine decarboxylase 1
+Hs.26322	CCRK cell cycle related kinase
+Hs.263925	"NUDE1 LIS1-interacting protein NUDE1, rat homolog"
+Hs.26516	FLJ10604 hypothetical protein FLJ10604
+Hs.265592	" ESTs, Weakly similar to PC4259 ferritin associated protein [H.sapiens]"
+Hs.266514	FLJ11342 hypothetical protein FLJ11342
+Hs.26685	CAPS calcyphosine
+Hs.267288	HSPC228 hypothetical protein
+Hs.267289	"POLA polymerase (DNA directed), alpha"
+Hs.26744	 ESTs
+Hs.267819	"PPP1R2 protein phosphatase 1, regulatory (inhibitor) subunit 2"
+Hs.267905	FLJ10422 hypothetical protein FLJ10422
+Hs.26799	DKFZP564D0764 DKFZP564D0764 protein
+Hs.268384	FZR1 Fzr1 protein
+Hs.268685	 ESTs
+Hs.268919	 ESTs
+Hs.268991	 ESTs
+Hs.270134	FLJ20280 hypothetical protein FLJ20280
+Hs.270847	LOC51174 delta-tubulin
+Hs.27099	FLJ23293 likely ortholog of mouse ADP-ribosylation-like factor 6 interacting protein 2
+Hs.272135	" ESTs, Weakly similar to 1207289A reverse transcriptase related protein [H.sapiens]"
+Hs.272458	"PPP3CA protein phosphatase 3 (formerly 2B), catalytic subunit, alpha isoform (calcineurin A alpha)"
+Hs.27262	 Homo sapiens clone 25110 mRNA sequence
+Hs.27289	LOC51003 CGI-125 protein
+Hs.272897	"TUBA3 tubulin, alpha 3"
+Hs.27299	HCNGP transcriptional regulator protein
+Hs.273294	FLJ20069 hypothetical protein FLJ20069
+Hs.27379	 ESTs
+Hs.27424	DDX11 DEAD/H (Asp-Glu-Ala-Asp/His) box polypeptide 11 (S.cerevisiae CHL1-like helicase)
+Hs.274417	MRPS18B mitochondrial ribosomal protein S18B
+Hs.274448	FLJ11029 hypothetical protein FLJ11029
+Hs.27657	KIAA0802 KIAA0802 protein
+Hs.27695	MID1 midline 1 (Opitz/BBB syndrome)
+Hs.27744	"RAB3A RAB3A, member RAS oncogene family"
+Hs.277585	KIAA0170 KIAA0170 gene product
+Hs.278338	HSU54999 LGN protein
+Hs.278378	"TRN2 karyopherin beta 2b, transportin"
+Hs.278408	TREX1 three prime repair exonuclease 1
+Hs.278526	RNTRE related to the N terminus of tre
+Hs.278554	CBX3 chromobox homolog 3 (Drosophila HP1 gamma)
+Hs.278625	C4B complement component 4B
+Hs.278635	HDCMA18P HDCMA18P protein
+Hs.279762	BRD7 bromodomain-containing 7
+Hs.279789	HDAC3 histone deacetylase 3
+Hs.279842	HSPC157 HSPC157 protein
+Hs.279903	RHEB2 Ras homolog enriched in brain 2
+Hs.279905	ANKT nucleolar protein ANKT
+Hs.281434	" Homo sapiens cDNA FLJ14028 fis, clone HEMBA1003838"
+Hs.28298	"AP4B1 adaptor-related protein complex 4, beta 1 subunit"
+Hs.283127	" ESTs, Weakly similar to T19201 hypothetical protein C11G6.3 - Caenorhabditis elegans [C.elegans]"
+Hs.283705	 ESTs
+Hs.2838	"ME3 malic enzyme 3, NADP(+)-dependent, mitochondrial"
+Hs.283978	" Homo sapiens PRO2751 mRNA, complete cds"
+Hs.284123	MGC4604 hypothetical protein MGC4604
+Hs.284137	FLJ12888 hypothetical protein FLJ12888
+Hs.284153	"FANCA Fanconi anemia, complementation group A"
+Hs.284208	DKFZP434N161 DKFZP434N161 protein
+Hs.28462	 ESTs
+Hs.28465	" Homo sapiens cDNA: FLJ21869 fis, clone HEP02442"
+Hs.285313	COPEB core promoter element binding protein
+Hs.285519	" Homo sapiens cDNA FLJ11904 fis, clone HEMBB1000048"
+Hs.285754	MET met proto-oncogene (hepatocyte growth factor receptor)
+Hs.286124	CD24 CD24 antigen (small cell lung carcinoma cluster 4 antigen)
+Hs.286148	STAG1 stromal antigen 1
+Hs.286212	FLJ11729 hypothetical protein FLJ11729
+Hs.28707	"SSR3 signal sequence receptor, gamma (translocon-associated protein gamma)"
+Hs.287820	FN1 fibronectin 1
+Hs.288140	CIA coactivator independent of AF-2
+Hs.28827	MAP3K2 mitogen-activated protein kinase kinase kinase 2
+Hs.28848	" ESTs, Weakly similar to ALU4_HUMAN ALU SUBFAMILY SB2 SEQUENCE CONTAMINATION WARNING ENTRY [H.sapiens]"
+Hs.28853	"CDC7L1 CDC7 (cell division cycle 7, S. cerevisiae, homolog)-like 1"
+Hs.288549	UBF-fl ubiquitin UBF-fl
+Hs.288613	" Homo sapiens cDNA FLJ14175 fis, clone NT2RP2002979"
+Hs.288799	"STCH stress 70 protein chaperone, microsome-associated, 60kD"
+Hs.288809	FLJ20159 hypothetical protein FLJ20159
+Hs.28893	 Homo sapiens mRNA; cDNA DKFZp564O2364 (from clone DKFZp564O2364)
+Hs.289099	KATNA1 katanin p60 (ATPase-containing) subunit A 1
+Hs.289107	BIRC2 baculoviral IAP repeat-containing 2
+Hs.2934	RRM1 ribonucleotide reductase M1 polypeptide
+Hs.29341	FLJ22376 hypothetical protein FLJ22376
+Hs.293419	 ESTs
+Hs.293797	 ESTs
+Hs.294088	GAJ GAJ protein
+Hs.29417	ZF HCF-binding transcription factor Zhangfei
+Hs.296322	" Homo sapiens cDNA: FLJ22844 fis, clone KAIA5181"
+Hs.296323	SGK serum/glucocorticoid regulated kinase
+Hs.296638	PLAB prostate differentiation factor
+Hs.29700	FLJ20094 hypothetical protein FLJ20094
+Hs.29716	FLJ10980 hypothetical protein FLJ10980
+Hs.29798	KIAA1712 KIAA1712 protein
+Hs.298275	KIAA1382 amino acid transporter 2
+Hs.298312	DKFZP434A1315 hypothetical protein DKFZp434A1315
+Hs.300070	" ESTs, Weakly similar to putative p150 [H.sapiens]"
+Hs.30114	MGC2577 hypothetical protein MGC2577
+Hs.30120	" ESTs, Weakly similar to NUCL_HUMAN NUCLEOLIN [H.sapiens]"
+Hs.301486	" ESTs, Weakly similar to protein that is immuno-reactive with anti-PTH polyclonal antibodies [H.sapiens]"
+Hs.301526	FLJ13181 hypothetical protein FLJ13181
+Hs.301760	FREQ frequenin (Drosophila) homolog
+Hs.301946	LBC lymphoid blast crisis oncogene
+Hs.30211	FLJ22313 hypothetical protein FLJ22313
+Hs.303091	"PSCD2 pleckstrin homology, Sec7 and coiled/coil domains 2 (cytohesin-2)"
+Hs.30464	CCNE2 cyclin E2
+Hs.306000	"SLC4A1AP solute carrier family 4 (anion exchanger), member 1, adapter protein"
+Hs.306088	CRK v-crk avian sarcoma virus CT10 oncogene homolog
+Hs.306117	KIAA0306 KIAA0306 protein
+Hs.307975	 EST
+Hs.309734	" ESTs, Moderately similar to NRD2 convertase [H.sapiens]"
+Hs.3107	CD97 CD97 antigen
+Hs.31305	KIAA1547 KIAA1547 protein
+Hs.31442	RECQL4 RecQ protein-like 4
+Hs.31444	 ESTs
+Hs.315167	MGC5528 hypothetical protein MGC5528
+Hs.317	TOP1 topoisomerase (DNA) I
+Hs.317584	 ESTs
+Hs.318775	ORP6 OSBP-related protein 6
+Hs.321022	 Homo sapiens mRNA; cDNA DKFZp566P1124 (from clone DKFZp566P1124)
+Hs.321197	INADL PDZ domain protein (Drosophila inaD-like)
+Hs.321775	DKFZp434D1428 hypothetical protein DKFZp434D1428
+Hs.32204	 ESTs
+Hs.322149	" Human clone 137308 mRNA, partial cds"
+Hs.323032	SIL TAL1 (SCL) interrupting locus
+Hs.32317	HMG20B high-mobility group 20B
+Hs.323346	KIAA1008 KIAA1008 protein
+Hs.323562	LOC114223 hypothetical protein
+Hs.32471	FLJ20364 hypothetical protein FLJ20364
+Hs.325093	" Homo sapiens cDNA: FLJ21210 fis, clone COL00479"
+Hs.325978	IL18BP interleukin 18 binding protein
+Hs.326451	" EST, Weakly similar to dJ45P21.2 [H.sapiens]"
+Hs.32922	FLJ20036 hypothetical protein FLJ20036
+Hs.331554	" ESTs, Highly similar to GLI1_HUMAN ZINC FINGER PROTEIN GLI1 [H.sapiens]"
+Hs.332086	 ESTs
+Hs.332563	MGC15716 hypothetical protein MGC15716
+Hs.332633	BBS2 Bardet-Biedl syndrome 2
+Hs.333371	" Homo sapiens clone TA40 untranslated mRNA, complete sequence"
+Hs.333524	MGC13064 hypothetical protein MGC13064
+Hs.334372	CSH2 chorionic somatomammotropin hormone 2
+Hs.33446	 ESTs
+Hs.334695	GATA2 GATA-binding protein 2
+Hs.334787	MGC19556 hypothetical protein MGC19556
+Hs.334828	FLJ10719 hypothetical protein FLJ10719
+Hs.334837	FLJ11626 hypothetical protein FLJ11626
+Hs.335043	 ESTs
+Hs.336706	 EST
+Hs.336780	"TUBB tubulin, beta polypeptide"
+Hs.336812	 ESTs
+Hs.339315	 ESTs
+Hs.339665	" ESTs, Weakly similar to T33068 hypothetical protein C35E7.9 - Caenorhabditis elegans [C.elegans]"
+Hs.340046	DKFZP434A0131 DKFZp434A0131 protein
+Hs.343236	" Homo sapiens, clone MGC:15396 IMAGE:3834331, mRNA, complete cds"
+Hs.343807	RAD51 RAD51 (S. cerevisiae) homolog (E coli RecA homolog)
+Hs.343877	FLJ20039 hypothetical protein FLJ20039
+Hs.344037	PRC1 protein regulator of cytokinesis 1
+Hs.345019	 ESTs
+Hs.346735	" Homo sapiens, clone IMAGE:3881549, mRNA"
+Hs.347134	 ESTs
+Hs.347274	 Homo sapiens mRNA; cDNA DKFZp762B195 (from clone DKFZp762B195)
+Hs.347524	" Homo sapiens, clone IMAGE:3542171, mRNA, partial cds"
+Hs.348012	" Homo sapiens, clone IMAGE:3628973, mRNA, partial cds"
+Hs.348374	" Homo sapiens, clone MGC:21655 IMAGE:4516234, mRNA, complete cds"
+Hs.348495	"MGC3165 similar to H2A histone family, member A (H. sapiens)"
+Hs.348571	LENG8 leukocyte receptor cluster (LRC) member 8
+Hs.348606	" Homo sapiens cDNA FLJ11417 fis, clone HEMBA1000960"
+Hs.35086	USP1 ubiquitin specific protease 1
+Hs.3530	FUSIP2 FUS-interacting protein (serine-arginine rich) 2
+Hs.35947	MBD4 methyl-CpG binding domain protein 4
+Hs.36606	 Homo sapiens mRNA; cDNA DKFZp547B086 (from clone DKFZp547B086)
+Hs.36708	"BUB1B budding uninhibited by benzimidazoles 1 (yeast homolog), beta"
+Hs.36828	" Homo sapiens, Similar to RIKEN cDNA 2900009I07 gene, clone MGC:17347 IMAGE:2901027, mRNA, complete cds"
+Hs.36830	 ESTs
+Hs.3686	KIAA0978 KIAA0978 protein
+Hs.37003	HRAS v-Ha-ras Harvey rat sarcoma viral oncogene homolog
+Hs.37006	ASIP agouti (mouse)-signaling protein
+Hs.37035	HLXB9 homeo box HB9
+Hs.37040	PDGFA platelet-derived growth factor alpha polypeptide
+Hs.37751	" ESTs, Weakly similar to S65824 reverse transcriptase homolog [H.sapiens]"
+Hs.38178	FLJ23468 hypothetical protein FLJ23468
+Hs.3838	SNK serum-inducible kinase
+Hs.3844	LMO4 LIM domain only 4
+Hs.3903	CEP4 Cdc42 effector protein 4; binder of Rho GTPases 4
+Hs.39913	WS-3 novel RGD-containing protein
+Hs.40510	UCP4 uncoupling protein 4
+Hs.40539	C8orf1 chromosome 8 open reading frame 1
+Hs.41693	"DNAJB4 DnaJ (Hsp40) homolog, subfamily B, member 4"
+Hs.42140	FLJ10103 hypothetical protein FLJ10103
+Hs.42315	BITE p10-binding protein
+Hs.42484	FLJ10618 hypothetical protein FLJ10618
+Hs.42650	ZWINT ZW10 interactor
+Hs.42743	HSPC148 hypothetical protein
+Hs.43148	 ESTs
+Hs.43213	" ESTs, Weakly similar to T45059 hypothetical protein Y39B6B.gg [imported] - Caenorhabditis elegans [C.elegans]"
+Hs.43299	FLJ12890 hypothetical protein FLJ12890
+Hs.44197	DKFZP564D0462 hypothetical protein DKFZp564D0462
+Hs.44269	 ESTs
+Hs.44380	 ESTs
+Hs.44499	"PNN pinin, desmosome associated protein"
+Hs.44896	"DNAJC6 DnaJ (Hsp40) homolog, subfamily C, member 6"
+Hs.44970	MGC5302 endoplasmic reticulum resident protein 58; hypothetical protein MGC5302
+Hs.4552	UBQLN2 ubiquilin 2
+Hs.46275	"CRYBA1 crystallin, beta A1"
+Hs.47125	FLJ13912 hypothetical protein FLJ13912
+Hs.4747	"DKC1 dyskeratosis congenita 1, dyskerin"
+Hs.47504	EXO1 exonuclease 1
+Hs.4756	FEN1 flap structure-specific endonuclease 1
+Hs.48474	 ESTs
+Hs.4854	"CDKN2C cyclin-dependent kinase inhibitor 2C (p18, inhibits CDK4)"
+Hs.48569	 ESTs
+Hs.48604	DKFZP434B168 DKFZP434B168 protein
+Hs.4935	KIAA0176 KIAA0176 protein
+Hs.49753	UACA uveal autoantigen with coiled-coil domains and ankyrin repeats
+Hs.4983	 ESTs
+Hs.4994	"TOB2 transducer of ERBB2, 2"
+Hs.50180	 ESTs
+Hs.50740	" Homo sapiens cDNA: FLJ22272 fis, clone HRC03192"
+Hs.50758	"SMC4L1 SMC4 (structural maintenance of chromosomes 4, yeast)-like 1"
+Hs.50905	STK9 serine/threonine kinase 9
+Hs.5120	"PIN dynein, cytoplasmic, light polypeptide"
+Hs.5152	MGC5585 hypothetical protein MGC5585
+Hs.5199	HSPC150 HSPC150 protein similar to ubiquitin-conjugating enzyme
+Hs.52256	FLJ20624 hypothetical protein FLJ20624
+Hs.53263	FLJ13287 hypothetical protein FLJ13287
+Hs.53455	 ESTs
+Hs.5400	KIAA1018 KIAA1018 protein
+Hs.54089	BARD1 BRCA1 associated RING domain 1
+Hs.552	"SRD5A1 steroid-5-alpha-reductase, alpha polypeptide 1 (3-oxo-5 alpha-steroid delta 4-dehydrogenase alpha 1)"
+Hs.55272	 ESTs
+Hs.55468	"H4F2 H4 histone, family 2"
+Hs.5599	"EGFL5 EGF-like-domain, multiple 5"
+Hs.5671	DMTF1 cyclin D binding Myb-like transcription factor 1
+Hs.5719	CNAP1 chromosome condensation-related SMC-associated protein 1
+Hs.57419	CTCF CCCTC-binding factor (zinc finger protein)
+Hs.5790	DJ37E16.5 hypothetical protein dJ37E16.5
+Hs.58169	"HEC highly expressed in cancer, rich in leucine heptad repeats"
+Hs.5831	"TIMP1 tissue inhibitor of metalloproteinase 1 (erythroid potentiating activity, collagenase inhibitor)"
+Hs.5855	 Homo sapiens mRNA; cDNA DKFZp434D0818 (from clone DKFZp434D0818)
+Hs.5909	 ESTs
+Hs.59413	 ESTs
+Hs.59461	DKFZP434C245 DKFZP434C245 protein
+Hs.597	"GOT1 glutamic-oxaloacetic transaminase 1, soluble (aspartate aminotransferase 1)"
+Hs.59757	ZNF281 zinc finger protein 281
+Hs.6019	" Homo sapiens cDNA: FLJ21288 fis, clone COL01927"
+Hs.6048	FEM1B FEM-1 (C.elegans) homolog b
+Hs.61126	 ESTs
+Hs.61708	 ESTs
+Hs.62112	ZNF207 zinc finger protein 207
+Hs.62180	"ANLN anillin (Drosophila Scraps homolog), actin binding protein"
+Hs.62711	" Homo sapiens, clone IMAGE:3351295, mRNA"
+Hs.63609	HTF9C HpaII tiny fragments locus 9C
+Hs.64794	"ZNF183 zinc finger protein 183 (RING finger, C3HC4 type)"
+Hs.65029	GAS1 growth arrest-specific 1
+Hs.656	CDC25C cell division cycle 25C
+Hs.6566	TRIP13 thyroid hormone receptor interactor 13
+Hs.6657	BK1048E9.5 hypothetical protein bK1048E9.5
+Hs.66718	RAD54L RAD54 (S.cerevisiae)-like
+Hs.6685	TRIP8 thyroid hormone receptor interactor 8
+Hs.6790	"DNAJB9 DnaJ (Hsp40) homolog, subfamily B, member 9"
+Hs.6844	FLJ20510 hypothetical protein FLJ20510
+Hs.6877	FLJ10483 hypothetical protein FLJ10483
+Hs.68864	" ESTs, Weakly similar to phosphatidylserine-specific phospholipase A1 deltaC [H.sapiens]"
+Hs.69280	MGC20533 similar to RIKEN cDNA 2410004L22 gene (M. musculus)
+Hs.69554	FLJ20552 hypothetical protein FLJ20552
+Hs.69563	"CDC6 CDC6 (cell division cycle 6, S. cerevisiae) homolog"
+Hs.69662	 ESTs
+Hs.70337	"IGSF4 immunoglobulin superfamily, member 4"
+Hs.70811	FLJ20516 hypothetical protein FLJ20516
+Hs.7089	LOC51141 insulin induced protein 2
+Hs.71040	FLJ20425 hypothetical protein FLJ20425
+Hs.71243	" ESTs, Weakly similar to zinc finger protein [H.sapiens]"
+Hs.71331	MGC5350 hypothetical protein MGC5350
+Hs.71818	 ESTs
+Hs.72071	FLJ20038 hypothetical protein FLJ20038
+Hs.72325	" Homo sapiens, clone MGC:22976 IMAGE:4875139, mRNA, complete cds"
+Hs.72363	" Homo sapiens mRNA for FLJ00116 protein, partial cds"
+Hs.7358	FLJ13110 hypothetical protein FLJ13110
+Hs.73853	BMP2 bone morphogenetic protein 2
+Hs.7426	KIAA0841 KIAA0841 protein
+Hs.74313	KIAA1265 KIAA1265 protein
+Hs.74420	"ORC3L origin recognition complex, subunit 3 (yeast homolog)-like"
+Hs.75056	"AP3D1 adaptor-related protein complex 3, delta 1 subunit"
+Hs.75066	TSN translin
+Hs.75117	"ILF2 interleukin enhancer binding factor 2, 45kD"
+Hs.75124	CDR2 cerebellar degeneration-related protein (62kD)
+Hs.75149	SH3GL2 SH3-domain GRB2-like 2
+Hs.75319	RRM2 ribonucleotide reductase M2 polypeptide
+Hs.75350	VCL vinculin
+Hs.75544	"YWHAH tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein, eta polypeptide"
+Hs.75573	CENPE centromere protein E (312kD)
+Hs.75574	MRPL19 mitochondrial ribosomal protein L19
+Hs.75772	"NR3C1 nuclear receptor subfamily 3, group C, member 1"
+Hs.75798	HSPC207 hypothetical protein
+Hs.75909	KIAA0182 KIAA0182 protein
+Hs.76297	GPRK6 G protein-coupled receptor kinase 6
+Hs.76669	NNMT nicotinamide N-methyltransferase
+Hs.76807	"HLA-DRA major histocompatibility complex, class II, DR alpha"
+Hs.76927	TOM34 translocase of outer mitochondrial membrane 34
+Hs.77171	MCM5 minichromosome maintenance deficient (S. cerevisiae) 5 (cell division cycle 46)
+Hs.77204	"CENPF centromere protein F (350/400kD, mitosin)"
+Hs.77498	PRPSAP1 phosphoribosyl pyrophosphate synthetase-associated protein 1
+Hs.77515	"ITPR3 inositol 1,4,5-triphosphate receptor, type 3"
+Hs.77550	" Homo sapiens, Similar to differential display and activated by p53, clone MGC:1780 IMAGE:3140182, mRNA, complete cds"
+Hs.77631	GCSH glycine cleavage system protein H (aminomethyl carrier)
+Hs.77724	KIAA0586 KIAA0586 gene product
+Hs.77729	OLR1 oxidised low density lipoprotein (lectin-like) receptor 1
+Hs.77770	"AP3M2 adaptor-related protein complex 3, mu 2 subunit"
+Hs.77886	LMNA lamin A/C
+Hs.78019	24432 hypothetical protein 24432
+Hs.78501	GAS6 growth arrest-specific 6
+Hs.7870	LOC51240 hypothetical protein
+Hs.78934	"MSH2 mutS (E. coli) homolog 2 (colon cancer, nonpolyposis type 1)"
+Hs.78996	PCNA proliferating cell nuclear antigen
+Hs.79018	"CHAF1A chromatin assembly factor 1, subunit A (p150)"
+Hs.79078	"MAD2L1 MAD2 (mitotic arrest deficient, yeast, homolog)-like 1"
+Hs.7913	" ESTs, Weakly similar to JC5314 CDC28/cdc2-like kinase associating arginine-serine cyclophilin [H.sapiens]"
+Hs.79141	VEGFC vascular endothelial growth factor C
+Hs.79306	EIF4E eukaryotic translation initiation factor 4E
+Hs.79335	"SMARCD1 SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily d, member 1"
+Hs.7935	KIAA0952 KIAA0952 protein
+Hs.7936	BAIAP2 BAI1-associated protein 2
+Hs.79411	RPA2 replication protein A2 (32kD)
+Hs.7984	"PSCD3 pleckstrin homology, Sec7 and coiled/coil domains 3"
+Hs.80288	HSPA1L heat shock 70kD protein-like 1
+Hs.80305	MGC14258 hypothetical protein MGC14258
+Hs.80306	AFAP actin filament associated protein
+Hs.80338	KIAA0164 KIAA0164 gene product
+Hs.80409	"GADD45A growth arrest and DNA-damage-inducible, alpha"
+Hs.8047	"FANCG Fanconi anemia, complementation group G"
+Hs.80684	HMG2 high-mobility group (nonhistone chromosomal) protein 2
+Hs.8071	SV2B synaptic vesicle protein 2B homolog
+Hs.81086	"SLC22A3 solute carrier family 22 (extraneuronal monoamine transporter), member 3"
+Hs.81263	 ESTs
+Hs.8146	TLOC1 translocation protein 1
+Hs.81648	"FLJ11021 hypothetical protein FLJ11021 similar to splicing factor, arginine/serine-rich 4"
+Hs.81892	KIAA0101 KIAA0101 gene product
+Hs.81972	SHC1 SHC (Src homology 2 domain-containing) transforming protein 1
+Hs.82109	SDC1 syndecan 1
+Hs.8230	"ADAMTS1 a disintegrin-like and metalloprotease (reprolysin type) with thrombospondin type 1 motif, 1"
+Hs.82646	"DNAJB1 DnaJ (Hsp40) homolog, subfamily B, member 1"
+Hs.82712	"FXR1 fragile X mental retardation, autosomal homolog 1"
+Hs.82741	"PRIM1 primase, polypeptide 1 (49kD)"
+Hs.82845	" Homo sapiens cDNA: FLJ21930 fis, clone HEP04301, highly similar to HSU90916 Human clone 23815 mRNA sequence"
+Hs.82961	TFF3 trefoil factor 3 (intestinal)
+Hs.82962	TYMS thymidylate synthetase
+Hs.83321	NMB neuromedin B
+Hs.8361	"E2IG4 hypothetical protein, estradiol-induced"
+Hs.83656	ARHGDIB Rho GDP dissociation inhibitor (GDI) beta
+Hs.8366	 ESTs
+Hs.83765	DHFR dihydrofolate reductase
+Hs.840	"INDO indoleamine-pyrrole 2,3 dioxygenase"
+Hs.84113	CDKN3 cyclin-dependent kinase inhibitor 3 (CDK2-associated dual specificity phosphatase)
+Hs.84264	SSP29 acidic protein rich in leucines
+Hs.8518	"SEPN1 selenoprotein N, 1"
+Hs.85482	USP13 ubiquitin specific protease 13 (isopeptidase T-3)
+Hs.85573	MGC10911 hypothetical protein MGC10911
+Hs.86131	FADD Fas (TNFRSF6)-associated via death domain
+Hs.87149	"ITGB3 integrin, beta 3 (platelet glycoprotein IIIa, antigen CD61)"
+Hs.87507	 ESTs
+Hs.88523	" Homo sapiens, clone MGC:4832 IMAGE:3604003, mRNA, complete cds"
+Hs.88663	FLJ10545 hypothetical protein FLJ10545
+Hs.88959	MGC12866 novel MCM2/3/5 family member
+Hs.89278	FLJ11186 hypothetical protein FLJ11186
+Hs.89385	"NPAT nuclear protein, ataxia-telangiectasia locus"
+Hs.89497	LMNB1 lamin B1
+Hs.89584	INSM1 insulinoma-associated 1
+Hs.89603	"MUC1 mucin 1, transmembrane"
+Hs.8966	TEM8 tumor endothelial marker 8
+Hs.89695	INSR insulin receptor
+Hs.89709	"GCLM glutamate-cysteine ligase, modifier subunit"
+Hs.90424	" Homo sapiens cDNA: FLJ23285 fis, clone HEP09071"
+Hs.90744	"PSMD11 proteasome (prosome, macropain) 26S subunit, non-ATPase, 11"
+Hs.91165	FLJ11127 hypothetical protein
+Hs.91175	TOP3A topoisomerase (DNA) III alpha
+Hs.91192	" Homo sapiens, clone IMAGE:3952677, mRNA, partial cds"
+Hs.91246	DKFZp547O146 hypothetical protein DKFZp547O146
+Hs.91417	TOPBP1 topoisomerase (DNA) II binding protein
+Hs.91773	"PPP2CA protein phosphatase 2 (formerly 2A), catalytic subunit, alpha isoform"
+Hs.92381	NUDT4 nudix (nucleoside diphosphate linked moiety X)-type motif 4
+Hs.92679	" Homo sapiens, clone MGC:10115 IMAGE:3900099, mRNA, complete cds"
+Hs.9270	IDI2 diphosphate dimethylallyl diphosphate isomerase 2
+Hs.93581	FLJ10512 hypothetical protein FLJ10512
+Hs.93758	"H4FH H4 histone family, member H"
+Hs.94037	FLJ23053 hypothetical protein FLJ23053
+Hs.94292	FLJ23311 hypothetical protein FLJ23311
+Hs.9460	 Homo sapiens mRNA; cDNA DKFZp547C244 (from clone DKFZp547C244)
+Hs.9683	"DNAJC3 DnaJ (Hsp40) homolog, subfamily C, member 3"
+Hs.9700	CCNE1 cyclin E1
+Hs.98102	"TUBA2 tubulin, alpha 2"
+Hs.99037	 ESTs
+Hs.9927	 Homo sapiens mRNA; cDNA DKFZp564D156 (from clone DKFZp564D156)
+Hs.99480	 ESTs
+Hs.99542	 ESTs
+Hs.9956	FLJ20259 hypothetical protein FLJ20259
+Hs.99807	" ESTs, Weakly similar to 5NTC_HUMAN CYTOSOLIC PURINE 5'-NUCLEOTIDAS [H.sapiens]"
+Hs.99819	USP16 ubiquitin specific protease 16
+Hs.99875	ZPBP zona pellucida binding protein
