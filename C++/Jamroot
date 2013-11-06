@@ -471,7 +471,6 @@ install install_ext_biopsy
     : # requirements
         <location>../Python/biopsy
         <install-dependencies>off
-        $(DLLPATHS)
     ;
 
 install install_ext_transfac
