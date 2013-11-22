@@ -56,59 +56,11 @@ cpp-pch bio-pch
 # Library: core
 #
 CORE_SOURCES =
-    application
-    common
-    database_ref
-    environment
-    equivalent_factors
-    exceptions
-    factor
-    fasta
-    gsl
-    lexer
-    log
-    match_hit
-    matrix_match
-    options
-    parsers
-    pathway
-    pathway_associations
-    pssm_motif
-    pssm_motif_elements
-    random
-    sequence
-    transcription_factor
-    ;
-ANTLR_SOURCES =
-    NucleoLexer
-    NumberLexer
-    ArrayLexer
-    ColonDotSemiStringLexer
-    StringLexer
-    IdLexer
-    LinkLexer
-    BiobaseLexer
-    ListLexer
-    WhiteSpaceLexer
-    PathwayLexer
-    CsvLexer
-    SequenceLexer
-    NameValuePairLexer
-    DotLexer
-    IndexLexer
-    DotSemiStringLexer
-    ColonStringLexer
-    DotSeparatedLexer
-    SemiStringLexer
-    FastaLexer
-    FastaParser
-    PssmMotifLexer
-    PssmMotifParser
     ;
 lib biopsy-core
     : # sources
         src/bio/lib/$(CORE_SOURCES).cpp
-        antlr-grammars/$(ANTLR_SOURCES).cpp
+        biopsy
         /boost/filesystem//boost_filesystem
         /boost/program_options//boost_program_options
         /boost/serialization//boost_serialization
@@ -136,6 +88,8 @@ SPIRIT_SOURCES =
 lib biopsy-spirit
     : # sources
         src/bio/lib/$(SPIRIT_SOURCES).cpp
+        biopsy-pwm
+        /boost/serialization//boost_serialization
     ;
 explicit biopsy-spririt ;  # Don't build by default
 BIOPSY_LIBS += biopsy-spirit ;
@@ -167,23 +121,16 @@ TESTS += test-spirit ;
 # Library: BIOBASE
 #
 BIOBASE_SOURCES =
-    biobase_data_traits
-    biobase_db
-    biobase_db_parse
-    biobase_binding_model
-    biobase_filter
-    biobase_likelihoods
-    biobase_match
-    biobase_pssm
-    biobase_tf
     ;
 lib biopsy-biobase
     : # sources
         src/bio/lib/$(BIOBASE_SOURCES).cpp
         biopsy-spirit
+        biopsy-pwm
         biopsy-core
         /boost/regex//boost_regex
         /boost/serialization//boost_serialization
+        /site-config//xerces-c/
     ;
 BIOPSY_LIBS += biopsy-biobase ;
 
@@ -200,14 +147,111 @@ LIB_SOURCES =
     site_data
     site_test_cases
     test_data
+    application
+    common
+    database_ref
+    environment
+    equivalent_factors
+    exceptions
+    factor
+    fasta
+    gsl
+    lexer
+    log
+    match_hit
+    matrix_match
+    options
+    parsers
+    pathway
+    pathway_associations
+    pssm_motif
+    pssm_motif_elements
+    random
+    sequence
+    transcription_factor
+    biobase_data_traits
+    biobase_db
+    biobase_db_parse
+    biobase_binding_model
+    biobase_filter
+    biobase_likelihoods
+    biobase_match
+    biobase_pssm
+    biobase_tf
+    add_tooltip_support
+    dom_print
+    DOMPrintFilter
+    DOMPrintErrorHandler
+    svg_create
+    svg_pssm_logo
+    xml_builder
+    adjust_hits
+    bifa_analysis
+    bifa_algorithm
+    binding_model
+    bio_max_chain
+    pssm
+    pssm_cache
+    pssm_likelihood
+    pssm_likelihood_cache
+    pssm_match_args
+    run_match
+    run_matches
+    remo
+    remo_analysis
+    test_remos
+    chromosomes_file_set
+    species_file_sets
+    background_models
+    hmm_dna
+    ;
+ANTLR_SOURCES =
+    NucleoLexer
+    NumberLexer
+    ArrayLexer
+    ColonDotSemiStringLexer
+    StringLexer
+    IdLexer
+    LinkLexer
+    BiobaseLexer
+    ListLexer
+    WhiteSpaceLexer
+    PathwayLexer
+    CsvLexer
+    SequenceLexer
+    ReMoLexer
+    ReMoStringLexer
+    ReMoNumberLexer
+    NameValuePairLexer
+    DotLexer
+    IndexLexer
+    DotSemiStringLexer
+    ColonStringLexer
+    DotSeparatedLexer
+    SemiStringLexer
+    FastaLexer
+    FastaParser
+    PssmMotifLexer
+    PssmMotifParser
+    ReMoParser
     ;
 lib biopsy
     : # sources
         src/bio/lib/$(LIB_SOURCES).cpp
-        biopsy-hmm
+        antlr-grammars/$(ANTLR_SOURCES).cpp
+        biopsy-spirit
+        #biopsy-remo
         /boost/regex//boost_regex
         /boost/filesystem//boost_filesystem
+        /boost/program_options//boost_program_options
         /boost/date_time//boost_date_time
+        /site-config//gsl/
+        /site-config//antlr/
+        /site-config//xerces-c/
+    : # requirements
+        <toolset>msvc:<source>src/bio/lib/win_open_file.cpp
+        <toolset>gcc:<source>src/bio/lib/linux_open_file.cpp
+        <toolset>darwin:<source>src/bio/lib/linux_open_file.cpp
     ;
 BIOPSY_LIBS += biopsy ;
 
@@ -262,14 +306,11 @@ BIOPSY_LIBS += biopsy-pathway ;
 # Library: remo
 #
 REMO_SOURCES =
-    remo
-    remo_analysis
-    test_remos
     ;
 lib biopsy-remo
     : # sources
         src/bio/lib/$(REMO_SOURCES).cpp
-        biopsy-pwm
+        #biopsy-pwm
         antlr-grammars/ReMoStringLexer.cpp
         antlr-grammars/ReMoNumberLexer.cpp
         antlr-grammars/ReMoLexer.cpp
@@ -280,17 +321,13 @@ lib biopsy-remo
         /site-config//antlr
     ;
 explicit biopsy-remo ;
-BIOPSY_LIBS += biopsy-remo ;
+#BIOPSY_LIBS += biopsy-remo ;
 
 
 #
 # Library: HMM
 #
 HMM_SOURCES =
-    chromosomes_file_set
-    species_file_sets
-    background_models
-    hmm_dna
     ;
 lib biopsy-hmm
     : # sources
@@ -304,13 +341,6 @@ BIOPSY_LIBS += biopsy-hmm ;
 # Library: SVG
 #
 SVG_SOURCES =
-    add_tooltip_support
-    dom_print
-    DOMPrintFilter
-    DOMPrintErrorHandler
-    svg_create
-    svg_pssm_logo
-    xml_builder
     ;
 lib biopsy-svg
     : # sources
@@ -324,31 +354,16 @@ BIOPSY_LIBS += biopsy-svg ;
 # Library: PWM
 #
 PWM_SOURCES =
-    adjust_hits
-    bifa_analysis
-    bifa_algorithm
-    binding_model
-    bio_max_chain
-    pssm
-    pssm_cache
-    pssm_likelihood
-    pssm_likelihood_cache
-    pssm_match_args
-    run_match
-    run_matches
     ;
 lib biopsy-pwm
     : # sources
         src/bio/lib/$(PWM_SOURCES).cpp
-        biopsy-svg
+        #biopsy-svg
         /boost/filesystem//boost_filesystem
         /boost/serialization//boost_serialization
         /site-config//gsl/
         /site-config//xerces-c/
     : # requirements
-        <toolset>msvc:<source>src/bio/lib/win_open_file.cpp
-        <toolset>gcc:<source>src/bio/lib/linux_open_file.cpp
-        <toolset>darwin:<source>src/bio/lib/linux_open_file.cpp
     ;
 explicit biopsy-pwm ;
 BIOPSY_LIBS += biopsy-pwm ;
@@ -387,12 +402,13 @@ lib biopsy2
     : # sources
         src/biopsy/lib/$(BIOPSY2_SOURCES).cpp
         pssm
-        biopsy-remo
-        biopsy
-        biopsy-pwm
-        biopsy-biobase
-        biopsy-core
+        #biopsy-remo
         biopsy-soap
+        biopsy
+        #biopsy-pwm
+        #biopsy-biobase
+        #biopsy-core
+        #biopsy-soap
         #/boost/filesystem//boost_filesystem
         #/boost/serialization//boost_serialization
         /site-config//gsl/
@@ -457,7 +473,7 @@ python-extension _bifa
         <source>myrrh//myrrh
     ;
 # Installation
-install install_ext_biopsy
+install install-ext-biopsy
     :
         _biopsy
     :
@@ -465,7 +481,7 @@ install install_ext_biopsy
         <install-dependencies>off
     ;
 
-install install_ext_transfac
+install install-ext-transfac
     :
         _transfac
     :
@@ -473,10 +489,13 @@ install install_ext_transfac
         <install-dependencies>off
     ;
 
-install install_so
+install install-so
     :
+        biopsy
+        biopsy2
         biopsy-python
-        biopsy-remo
+        biopsy-soap
+        biopsy-spirit
         biopsy-biobase
         /boost/date_time//boost_date_time
         /boost/filesystem//boost_filesystem
@@ -491,8 +510,8 @@ install install_so
         <variant>debug:<location>lib/debug
         <variant>release:<location>lib
     ;
-alias install_biopsy : install_so install_ext_biopsy install_ext_transfac ;
-alias install : install_biopsy ;
+alias install-biopsy : install-so install-ext-biopsy install-ext-transfac ;
+alias install : install-biopsy ;
 
 
 #
@@ -500,6 +519,58 @@ alias install : install_biopsy ;
 #
 lib biopsy-test : test/bio_lib.cpp ;
 
+
+#
+# Executables
+#
+BIOPSY_EXES =
+    $(BIO_EXTRA_EXES)
+    bifa
+    factor-synonyms
+    hmm-trainer
+    # kegg # SOAP interface to KEGG
+    markov-models-from-fasta
+    # output-site-data # print information about sites in TRANSFAC
+    parse-custom-pssms
+    parse-transfac
+    pssm-bg-likelihoods
+    # pssm-ensembl-genes # prints Ensembl genes associated with PSSMs
+    pssm-calculate-normalisations
+    pssm-calculate-binding-likelihoods
+    pssm-show-likelihoods
+    ;
+for EXE in $(BIOPSY_EXES) {
+    exe $(EXE)
+        :
+            src/bio/exes/main-$(EXE).cpp
+            biopsy2
+            biopsy
+            biopsy-biobase
+            biopsy-spirit
+            biopsy-pwm
+            biopsy-soap
+            biopsy-core
+            #/boost/system//boost_system
+            #/boost/filesystem//boost_filesystem
+            /boost/serialization//boost_serialization
+            /boost/program_options//boost_program_options
+            #$(BOOST_LIBRARIES)
+            #/site-config//gsl
+            #/site-config//xerces-c
+            /site-config//antlr
+        :
+            #<include>src/lib
+            #<implicit-dependency>bio
+        ;
+}
+install install-exes
+    :
+        $(BIOPSY_EXES)
+    :
+        <variant>debug:<location>bin/debug
+        <variant>release:<location>bin
+    ;
+alias all-exes : $(BIOPSY_EXES) ;
 
 #
 # Tests: standalone
@@ -511,7 +582,7 @@ STANDALONE_TESTS =
 for TEST in $(STANDALONE_TESTS) {
     run
             test/$(TEST).cpp
-            biopsy-remo
+            biopsy
             /boost//unit_test_framework/<link>static
             #boost-unit-test/<link>static
             # boost-unit-test
@@ -589,8 +660,8 @@ exe test-biopsy
         biopsy-spirit
         biopsy-pwm
         biopsy-svg
-        biopsy-remo
-        biopsy-hmm
+        #biopsy-remo
+        #biopsy-hmm
         biopsy-tss
         biopsy-pathway
         test/bio_test.cpp
@@ -619,7 +690,7 @@ TESTS += test-biopsy ;
 # Test BiFA algorithm
 #
 BIFA_MAIN_SOURCES =
-    src/bio/exes/main_bifa.cpp
+    src/bio/exes/main-bifa.cpp
     biopsy2
     biopsy-soap
     biopsy-pwm
@@ -657,8 +728,6 @@ PY_TESTS =
     ;
 PY_TEST_SOURCES =
     _biopsy
-    biopsy-remo
-    biopsy-pwm
     biopsy
     ;
 for PY_TEST in $(PY_TESTS) {
@@ -666,7 +735,7 @@ for PY_TEST in $(PY_TESTS) {
     bpl-test $(NAME) : python_test/test_$(PY_TEST).py _biopsy ;
     PYTESTS += $(NAME) ;
 }
-bpl-test bifa_score_test : python_test/bifa/test_bifa_score.py _bifa _biopsy ;
+bpl-test bifa_score_test : python_test/bifa/test_bifa_score.py _bifa _biopsy biopsy ;
 PYTESTS += bifa_score_test ;
 
 
@@ -686,7 +755,7 @@ run src/biopsy/test/test_bifa_score.cpp
 run src/biopsy/test/test_site_consensus.cpp
     biopsy2
     biopsy-spirit
-    biopsy-core
+    biopsy
     /boost//unit_test_framework/
     /boost/system//boost_system/
     :
@@ -795,7 +864,7 @@ bpl-test gapped_pssm_hmm_test
         _gapped_pssms_hmm
     ;
 
-install install_ext_gapped_psmms
+install install-ext-gapped-psmms
     :
         _gapped_pssms
         _gapped_pssms_hmm

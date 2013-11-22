@@ -5,9 +5,9 @@ SELFDIR=$(dirname $SELF)
 
 cd $HOME/Data/serialised
 
-parse_transfac
+parse-transfac
 rm factor_synonyms.txt
-factor_synonyms
+factor-synonyms
 $SELFDIR/update-pssm-cache
-calculate_pssm_likelihoods
-# calculate_normalisations  # Can only run this when we have a species_hmm.txt
+calculate-pssm-likelihoods
+# calculate-normalisations  # Can only run this when we have a species_hmm.txt
