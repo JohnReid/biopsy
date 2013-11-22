@@ -774,9 +774,8 @@ run src/biopsy/test/test_site_consensus.cpp
 # run src/biopsy/test/test_multi_array_view.cpp : : : : test_multi_array_view ;
 run src/biopsy/test/test_max_chain.cpp
     biopsy2
-    biopsy-spirit
     biopsy-soap
-    biopsy-core
+    biopsy
     #/boost//unit_test_framework/
     /boost/system//boost_system/
     :
@@ -801,7 +800,7 @@ run-fail src/biopsy/test/valgrind_leak.cpp
 run src/biopsy/test/valgrind_run_bifa.cpp
     biopsy2
     biopsy-soap
-    biopsy-core
+    biopsy
     /boost/system//boost_system/
     : $(ETC)/test-data/maximal-chain-e2f.fasta
     :
