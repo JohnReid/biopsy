@@ -8,6 +8,7 @@ import python ;
 use-project /boost : $(BOOST_ROOT) ;
 
 path-constant ETC : ../etc ;
+path-constant LIB : lib ;
 
 GCC_CFLAGS =
     -Wno-deprecated
@@ -443,13 +444,16 @@ BIOPSY_SRC =
     transfac_2
     transfac_3
     ;
+DLLPATHS =
+    <variant>debug:<dll-path>$(LIB)/debug
+    <variant>release:<dll-path>$(LIB)
+    ;
 lib biopsy-python
     : # sources
         src/biopsy/python/python_$(BIOPSY_SRC).cpp
         biopsy2
         /boost/python//boost_python
     : # requirements
-        # <use>/boost/python//boost_python # gets python include path
         <define>BIOPSY_BUILD_PYTHON_EXPORT
     ;
 # Python extension
@@ -457,11 +461,15 @@ python-extension _biopsy
     : # sources
         src/biopsy/python/module_biopsy.cpp
         biopsy-python
+    : # requirements
+        $(DLLPATHS)
    ;
 python-extension _transfac
     : # sources
         src/biopsy/python/module_transfac.cpp
         biopsy-python
+    : # requirements
+        $(DLLPATHS)
     ;
 python-extension _bifa
     : # sources
@@ -469,14 +477,14 @@ python-extension _bifa
         biopsy-python
         biopsy2
         myrrh//myrrh_pylib
-    :
-        <source>myrrh//myrrh
+    : # requirements
+        $(DLLPATHS)
     ;
 # Installation
 install install-ext-biopsy
     :
         _biopsy
-    :
+    : # requirements
         <location>../Python/biopsy
         <install-dependencies>off
     ;
@@ -484,7 +492,7 @@ install install-ext-biopsy
 install install-ext-transfac
     :
         _transfac
-    :
+    : # requirements
         <location>../Python/biopsy/transfac
         <install-dependencies>off
     ;
@@ -506,9 +514,9 @@ install install-so
         #/boost/signals//boost_signals
         /boost/system//boost_system
         /boost/thread//boost_thread
-    :
-        <variant>debug:<location>lib/debug
-        <variant>release:<location>lib
+    : # requirements
+        <variant>debug:<location>$(LIB)/debug
+        <variant>release:<location>$(LIB)
     ;
 alias install-biopsy : install-so install-ext-biopsy install-ext-transfac ;
 alias install : install-biopsy ;
