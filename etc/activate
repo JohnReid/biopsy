@@ -1,0 +1,10 @@
+# Determine directory
+SELF=$(readlink -f $BASH_SOURCE)
+PROJECTDIR=$(dirname $(dirname $SELF))
+export PYTHONDIR=$PROJECTDIR/Python
+export BINDIR=$PROJECTDIR/C++/bin
+export LIBDIR=$PROJECTDIR/C++/lib
+
+export PATH=$BINDIR:$PATH
+export LD_LIBRARY_PATH=$LIBDIR:$LD_LIBRARY_PATH
+export PYTHONPATH=$PYTHONDIR:$PYTHONPATH
