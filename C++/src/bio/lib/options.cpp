@@ -1,4 +1,4 @@
-/* Copyright John Reid 2007
+/* Copyright John Reid 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014
 */
 
 #include "bio-pch.h"
@@ -78,7 +78,7 @@ BioOptions::parse_config_file(
 		fs::path config_file = dir / filename;
 		if (fs::exists(config_file))
 		{
-			cout << "Parsing default config file: " << fs::system_complete( config_file ).normalize()._BOOST_FS_NATIVE() << endl;
+			cerr << "Parsing default config file: " << fs::system_complete( config_file ).normalize()._BOOST_FS_NATIVE() << endl;
 
 			//parse the default config file
 			fs::ifstream stream(config_file);
