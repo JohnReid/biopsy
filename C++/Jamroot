@@ -574,9 +574,11 @@ for EXE in $(BIOPSY_EXES) {
 install install-exes
     :
         $(BIOPSY_EXES)
+        biopsy-spirit
+        biopsy
     :
-        <variant>debug:<location>bin/debug
-        <variant>release:<location>bin
+        <variant>debug:<location>exes/debug
+        <variant>release:<location>exes
     ;
 alias all-exes : $(BIOPSY_EXES) ;
 

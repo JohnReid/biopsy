@@ -1,4 +1,4 @@
-/** Copyright John Reid 2012, 2013
+/** Copyright John Reid 2012, 2013, 2014
  *
  * \file
  * \brief Parses TRANSFAC flat files using boost::spirit qi.
@@ -546,14 +546,18 @@ struct dbref_parser : qi::grammar< Iterator, db_ref(), ascii::blank_type >
         ignore = omit[*(char_ - eol)];
         unknown = ignore >> attr(db_ref());
         notparseddb =
-                lit("BKL:")
+                lit("AGILENT:")
+            |   lit("BKL:")
             |   lit("BRENDA:")
             |   lit("CLDB:")
             |   lit("DATF:")
             |   lit("EPD:")
-            |    lit("HGNC:")
+            |   lit("HGNC:")
+            |   lit("ILLUMINA:")
+            |   lit("IPI:")
             |   lit("MGI:")
             |   lit("MIRBASE:")
+            |   lit("MIRBASENAME:")
             |   lit("OMIM:")
             |   lit("PATHODB:")
             |   lit("PDB:")
@@ -1104,7 +1108,6 @@ struct compel_parser
                     |   this->string_line( val( "ID  " ) )   //ignore the identifier
                     |   this->dbref_section                  [ phoenix::bind( &parsed_type::database_refs    , *_val ) = _1 ]
                     |   this->concatenated_sequence_section  [ phoenix::bind( &parsed_type::sequence         , *_val ) = _1 ]
-                    |   this->dbref_section                  [ phoenix::bind( &parsed_type::database_refs    , *_val ) = _1 ]
                     |   +this->string_line( val( "CC  " ) )  [ phoenix::bind( &parsed_type::comment, *_val ) +=_1 ]
                     |   ( lit( "TY  " ) > type                [ phoenix::bind( &parsed_type::type             , *_val ) = _1 ] > eol )
                     |   (   lit( "NO  " ) > int_ > eol
@@ -1426,6 +1429,7 @@ struct matrix_parser
             ( "TY  " ) // Type
             ( "OS  " ) // Species/Taxon
             ( "OC  " ) // Taxonomic classification
+            ( "CL  " ) // Matrix class (based on factor structure)
             ( "HP  " ) // Superfamilies
             ( "HC  " ) // Subfamilies
 //            ( "BF  " ) // Binding Factors
@@ -1436,6 +1440,7 @@ struct matrix_parser
             ( "DR  " ) // External database links
             ( "OV  " ) // Older version
             ( "PV  " ) // Preferred version
+            ( "PR  " ) // Match Profile (matrix set) in which the matrix is included
             ( "RN  " ) // Reference number
             ( "RX  " ) // PUBMED; link to PubMed entry.
             ( "RA  " ) // Reference authors
@@ -1508,6 +1513,8 @@ struct fragment_parser
             ( "SQ  " ) // Sequence
             ( "SC  " ) // Sequence Source
 //            ( "BF  " ) // Binding factors
+            ( "BS  " ) // Binding site
+            ( "PR  " ) // ???
             ( "PS  " ) // Best supported binding site in the fragment's sequence predicted by Match
             ( "MM  " ) // Method(s)
             ( "DR  " ) // External database links
@@ -1527,13 +1534,10 @@ struct fragment_parser
                     // |   this->concatenated_sequence_section [ phoenix::bind( &parsed_type::sequence, *_val ) = _1 ]
                     |   // gene section
                         (   lit( "DE  " )
-                        >   (   lit( "Gene: " )
-                            >   (   this->tablelink % lit( ", " ) )
-                            >   (   lit( " (forward)" )
-                                |   lit( " (reverse)" )
-                                )
-                            ) % lit( "; " )
-                        >   eol
+                        >   +(  lit( "Gene: " )
+                            >   this->tablelink
+                            >   this->ignored_rest_of_line
+                            )
                         )
                     ) > -this->section_separator // sometimes Biobase forget the separator so make it optional
                 )
@@ -1586,6 +1590,7 @@ struct site_parser
 //            ( "S1  " ) // Reference point
 //            ( "SF  " ) // Start position
 //            ( "ST  " ) // End position
+            ( "SC  " ) // For sites mapped to the genome
 //            ( "BF  " ) // Binding factors
             ( "MX  " ) // Matrices
             ( "SO  " ) // Cellular factor source

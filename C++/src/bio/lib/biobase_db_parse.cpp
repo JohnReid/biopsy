@@ -82,12 +82,12 @@ BiobaseDb::load_all() const
 	get_matrices();
 	get_sites();
 	get_factors();
-	get_fragments();
 	get_genes();
 	get_compels();
 	get_evidences();
-//	get_pathways();
-//	get_molecules();
+	//get_fragments();
+	//get_pathways();
+	//get_molecules();
 }
 
 

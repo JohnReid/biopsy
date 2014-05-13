@@ -42,12 +42,12 @@ struct ParseBiobaseApp : Application
 		cout << "# matrices:  " << BiobaseDb::singleton().get_matrices().size() << "\n";
 		cout << "# sites:     " << BiobaseDb::singleton().get_sites().size() << "\n";
 		cout << "# factors:   " << BiobaseDb::singleton().get_factors().size() << "\n";
-		cout << "# fragments: " << BiobaseDb::singleton().get_fragments().size() << "\n";
 		cout << "# genes:     " << BiobaseDb::singleton().get_genes().size() << "\n";
 		cout << "# compels:   " << BiobaseDb::singleton().get_compels().size() << "\n";
 		cout << "# evidences: " << BiobaseDb::singleton().get_evidences().size() << "\n";
-//		cout << "# pathways:  " << BiobaseDb::singleton().get_pathways().size() << "\n";
-//		cout << "# molecules: " << BiobaseDb::singleton().get_molecules().size() << "\n";
+		//cout << "# fragments: " << BiobaseDb::singleton().get_fragments().size() << "\n";
+		//cout << "# pathways:  " << BiobaseDb::singleton().get_pathways().size() << "\n";
+		//cout << "# molecules: " << BiobaseDb::singleton().get_molecules().size() << "\n";
 		//cout << "finished: type any key to continue\n";
 		//char c;
 		//std::cin >> c;
