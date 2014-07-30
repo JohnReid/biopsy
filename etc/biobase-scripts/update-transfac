@@ -6,7 +6,7 @@ SELFDIR=$(dirname $SELF)
 cd $HOME/Data/serialised
 
 parse-transfac
-rm factor_synonyms.txt
+[ -f factor_synonyms.txt ] && rm factor_synonyms.txt
 factor-synonyms
 $SELFDIR/update-pssm-cache
 calculate-pssm-likelihoods
