@@ -701,6 +701,7 @@ TESTS += test-biopsy ;
 #
 BIFA_MAIN_SOURCES =
     src/bio/exes/main-bifa.cpp
+    biopsy
     biopsy2
     biopsy-soap
     biopsy-pwm
